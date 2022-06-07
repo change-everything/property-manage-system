@@ -24,7 +24,8 @@ spring:
     default-property-inclusion: non_null # JSON?????????
 
 mybatis-plus:
-  type-aliases-package: com.hmdp.entity # ?????
+  type-aliases-package: edu.f4.pojo # ?????
+#  type-enums-package:
 
 logging:
    level:
