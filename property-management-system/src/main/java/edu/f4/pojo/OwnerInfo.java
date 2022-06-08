@@ -17,7 +17,7 @@ public class OwnerInfo {
     //业主编号
     private Integer ownerNum;
     //业主姓名
-    private  String ownerName;
+    private String ownerName;
     //房号
     private Integer roomNum;
     //房屋面积

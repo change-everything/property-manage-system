@@ -13,9 +13,7 @@ import lombok.NoArgsConstructor;
 @TableName(value = "permissions")//权限表
 public class Permissions {
     @TableId(type = IdType.AUTO)
-    private Integer id;
-    //角色id
-    private Integer roleId;
+    private Integer permId;
     //角色权限
-    private  String rolePer;
+    private String rolePer;
 }

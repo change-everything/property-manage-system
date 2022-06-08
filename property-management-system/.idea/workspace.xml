@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="mybatis-config" />
         <option value="mybatis-mapper" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,12 +39,28 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/edu/f4/service/impl" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/JavaTechnologyStack/springSecurity/springSercuityDemo1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "69b71e9240ec596207a3dbefa5a0ff10"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\utils" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\service\impl" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\service" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\mapper" />
@@ -52,17 +68,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.PropertyManagementSystemApplication">
-    <configuration default="true" type="lua.app" factoryName="Lua Application">
-      <option name="program" value="lua.exe" />
-      <option name="file" value="" />
-      <option name="workingDir" value="$PROJECT_DIR$/src/test/java" />
-      <option name="debuggerType" value="1" />
-      <option name="params" value="" />
-      <option name="charset" value="UTF-8" />
-      <option name="showConsole" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration name="PropertyManagementSystemApplicationTests.testFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PropertyManagementSystemApplicationTests.testCharge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
@@ -72,13 +78,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.f4" />
       <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
-      <option name="METHOD_NAME" value="testFirst" />
+      <option name="METHOD_NAME" value="testCharge" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PropertyManagementSystemApplicationTests.testGetPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PropertyManagementSystemApplicationTests.testDept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
@@ -88,7 +94,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.f4" />
       <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
-      <option name="METHOD_NAME" value="testGetPage" />
+      <option name="METHOD_NAME" value="testDept" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PropertyManagementSystemApplicationTests.testEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="property-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.f4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.f4" />
+      <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
+      <option name="METHOD_NAME" value="testEmp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PropertyManagementSystemApplicationTests.testRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="property-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.f4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.f4" />
+      <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
+      <option name="METHOD_NAME" value="testRole" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMapper.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="property-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.f4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.f4" />
+      <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
+      <option name="METHOD_NAME" value="testAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,8 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testGetPage" />
-        <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testFirst" />
+        <item itemvalue="JUnit.TestMapper.testAll" />
+        <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testRole" />
+        <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testEmp" />
+        <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testDept" />
+        <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testCharge" />
       </list>
     </recent_temporary>
   </component>
@@ -120,10 +177,30 @@
       <workItem from="1654523434043" duration="7957000" />
       <workItem from="1654594601739" duration="2010000" />
       <workItem from="1654599455208" duration="314000" />
+      <workItem from="1654600124277" duration="117000" />
+      <workItem from="1654600262149" duration="211000" />
+      <workItem from="1654600494555" duration="153000" />
+      <workItem from="1654600668001" duration="48446000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/f4/controller/LoginController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

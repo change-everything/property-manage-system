@@ -1,11 +1,68 @@
 package edu.f4.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.lang.UUID;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import edu.f4.dto.EmployeeDTO;
+import edu.f4.dto.LoginFormDTO;
+import edu.f4.dto.Result;
 import edu.f4.mapper.EmployeeInfoMapper;
 import edu.f4.pojo.EmployeeInfo;
 import edu.f4.service.IEmployeeInfoService;
+import org.apache.logging.log4j.util.Strings;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpSession;
 
 @Service
 public class EmployeeInfoServiceImpl extends ServiceImpl<EmployeeInfoMapper, EmployeeInfo>implements IEmployeeInfoService {
+
+    @Autowired
+    private EmployeeInfoMapper employeeInfoMapper;
+
+    @Override
+    public IPage<EmployeeInfo> getPage(int currentPage, int pageSize, EmployeeInfo employeeInfo) {
+        LambdaQueryWrapper<EmployeeInfo> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(Strings.isNotEmpty(employeeInfo.getAddress()), EmployeeInfo::getAddress, employeeInfo.getAddress());
+        queryWrapper.like(Strings.isNotEmpty(employeeInfo.getEmpName()), EmployeeInfo::getEmpName, employeeInfo.getEmpName());
+
+        IPage<EmployeeInfo> page = new Page<>(currentPage, pageSize);
+        employeeInfoMapper.selectPage(page, queryWrapper);
+        return page;
+    }
+
+    @Override
+    public Result login(LoginFormDTO loginFormDTO, HttpSession session) {
+
+        Integer empNum = loginFormDTO.getEmpNum();
+        String empPwd = loginFormDTO.getEmpPwd();
+
+        EmployeeInfo emp = employeeInfoMapper.getEmpAndRoleAndPermsByEmpNum(empNum);
+
+        if (emp == null) {
+            return Result.fail("用户不存在");
+        }
+
+        if (!emp.getEmpPwd().equals(empPwd)) {
+            return Result.fail("密码错误");
+        }
+
+        // 生成登录令牌
+        String token = UUID.randomUUID().toString(true);
+        // 将emp转为empDTO存储
+        EmployeeDTO empDTO = BeanUtil.copyProperties(emp, EmployeeDTO.class);
+        empDTO.setToken(token);
+        // 存储
+        //Map<String, Object> empMap = BeanUtil.beanToMap(empDTO, new HashMap<>(),
+        //        CopyOptions.create().setIgnoreNullValue(true).setFieldValueEditor((fieldName, fieldValue) -> fieldValue.toString()));
+
+        return Result.ok(empDTO);
+
+    }
+
+
 }

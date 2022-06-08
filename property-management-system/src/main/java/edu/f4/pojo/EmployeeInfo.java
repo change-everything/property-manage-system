@@ -7,6 +7,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+import java.util.List;
+
 
 @Data
 @AllArgsConstructor
@@ -15,14 +18,13 @@ import lombok.NoArgsConstructor;
 public class EmployeeInfo {
     @TableId(type = IdType.AUTO)
     private Integer empId;
-    //角色id
-    private Integer roleId;
+
     //员工号
     private Integer empNum;
     //员工姓名
-    private  String empName;
+    private String empName;
     //出生日期
-    private String birthDate;
+    private Date birthDate;
     //员工性别
     private Char gender;
     //员工住址
@@ -31,4 +33,11 @@ public class EmployeeInfo {
     private Integer empDepNum;
     //员工密码
     private String empPwd;
+
+    // 员工角色
+    private RoleGroup role;
+
+    // 员工权限
+    private Permissions perms;
+
 }

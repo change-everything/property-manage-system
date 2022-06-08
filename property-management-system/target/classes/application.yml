@@ -3,7 +3,6 @@ server:
 
 
 spring:
-  # ?????
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     # manager_system
@@ -21,12 +20,13 @@ spring:
         min-idle: 1
         time-between-eviction-runs: 10s
   jackson:
-    default-property-inclusion: non_null # JSON?????????
+    default-property-inclusion: non_null
 
 mybatis-plus:
-  type-aliases-package: edu.f4.pojo # ?????
+  type-aliases-package: edu.f4.pojo
 #  type-enums-package:
 
 logging:
    level:
-     com.hmdp: debug
+     edu.f4: debug
+

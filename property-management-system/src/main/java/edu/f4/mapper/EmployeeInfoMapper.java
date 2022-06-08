@@ -7,4 +7,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface EmployeeInfoMapper extends BaseMapper<EmployeeInfo> {
+
+    EmployeeInfo getEmpAndRoleAndPermsByEmpNum(Integer empNum);
+
+    EmployeeInfo queryByEmpNum(Integer empNum);
+
 }

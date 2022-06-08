@@ -1,30 +1,56 @@
 package edu.f4;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import edu.f4.pojo.User;
-import edu.f4.service.IUserService;
+import edu.f4.pojo.OwnerInfo;
+import edu.f4.service.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 @SpringBootTest
 class PropertyManagementSystemApplicationTests {
 
     @Autowired
-    private IUserService userService;
+    private IOwnerInfoService ownerInfoService;
+    @Autowired
+    private IChargeInfoService chargeInfoService;
+    @Autowired
+    private IDepartmentInfoService departmentInfoService;
+    @Autowired
+    private IEmployeeInfoService employeeInfoService;
+    @Autowired
+    private IRoleGroupService roleGroupService;
+
+
 
     @Test
-    void testFirst() {
-        User byId = userService.getById(1);
+    void testOwner() {
+        List<OwnerInfo> list = ownerInfoService.list();
 
-        System.out.println(byId);
+        list.forEach(System.out::println);
     }
 
-    //@Test
-    //void testGetPage() {
-    //    IPage<User> page = userService.getPage(1, 3, null);
-    //
-    //    System.out.println(page.getPages());
-    //    System.out.println(page.getTotal());
-    //}
+    @Test
+    void testCharge() {
+        System.out.println(chargeInfoService.list());
+    }
+
+
+    @Test
+    void testDept() {
+        System.out.println(departmentInfoService.list());
+    }
+
+
+    @Test
+    void testEmp() {
+        System.out.println(employeeInfoService.list());
+    }
+
+    @Test
+    void testRole() {
+
+        System.out.println(roleGroupService.list());
+    }
 }
