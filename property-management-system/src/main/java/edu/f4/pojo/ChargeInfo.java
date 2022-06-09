@@ -28,4 +28,6 @@ public class ChargeInfo {
     private String chaSum;
     //员工号
     private  Integer empNum;
+    //状态
+    private Integer status;
 }

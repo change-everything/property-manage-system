@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.f4.mapper.ChargeInfoMapper">
+
+    <select id="queryChargeInfoByStatus" resultType="chargeInfo">
+        select * from charge_info where status = #{status}
+    </select>
+
+    <update id="updateStatus">
+        update  charge_info set status=1 where cha_Id = #{chaId}
+    </update>
+
+
+
+</mapper>
