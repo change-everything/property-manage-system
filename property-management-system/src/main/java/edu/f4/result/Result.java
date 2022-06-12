@@ -1,4 +1,4 @@
-package edu.f4.dto;
+package edu.f4.result;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,4 +31,10 @@ public class Result {
     public static Result fail(String errorMsg){
         return new Result(false, errorMsg, null, null);
     }
+
+    public static Result fail(ResultCode resultEnum) {
+        return new Result(false, null, resultEnum, null);
+    }
+
+
 }

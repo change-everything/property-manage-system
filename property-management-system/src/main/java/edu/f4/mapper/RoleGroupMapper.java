@@ -6,4 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface RoleGroupMapper extends BaseMapper<RoleGroup> {
+
+    RoleGroup getByEmpId(Integer empId);
+
 }

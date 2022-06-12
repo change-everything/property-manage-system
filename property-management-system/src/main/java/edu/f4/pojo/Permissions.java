@@ -15,5 +15,11 @@ public class Permissions {
     @TableId(type = IdType.AUTO)
     private Integer permId;
     //角色权限
-    private String rolePer;
+    private String permCode;
+
+    // 权限名
+    private String permName;
+
+    // 请求路径
+    private String url;
 }

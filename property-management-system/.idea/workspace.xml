@@ -22,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="mybatis-config" />
-        <option value="mybatis-mapper" />
         <option value="Interface" />
+        <option value="mybatis-mapper" />
         <option value="Class" />
       </list>
     </option>
@@ -49,10 +49,29 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/myProject/managementSystem/property-management-system",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "69b71e9240ec596207a3dbefa5a0ff10"
+  }
+}]]></component>
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -68,24 +87,13 @@
       <recent name="edu.f4.controller" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="JUnit.testZFPro.test01">
     <configuration name="PropertyManagementSystemApplicationTests.testDept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="property-management-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.f4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.f4" />
-      <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
-      <option name="METHOD_NAME" value="testDept" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+=======
+  <component name="RunManager" selected="Spring Boot.PropertyManagementSystemApplication">
     <configuration name="PropertyManagementSystemApplicationTests.testEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
@@ -95,13 +103,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.f4" />
       <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
+<<<<<<< HEAD
+      <option name="METHOD_NAME" value="testDept" />
+=======
       <option name="METHOD_NAME" value="testEmp" />
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+    <configuration name="PropertyManagementSystemApplicationTests.testEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+=======
     <configuration name="PropertyManagementSystemApplicationTests.testRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
@@ -110,14 +126,47 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.f4" />
+      <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
+<<<<<<< HEAD
+      <option name="METHOD_NAME" value="testEmp" />
+=======
+      <option name="METHOD_NAME" value="testRole" />
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+<<<<<<< HEAD
+    <configuration name="PropertyManagementSystemApplicationTests.testRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="TestMapper.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
+      <module name="property-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.f4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.f4" />
+<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
       <option name="METHOD_NAME" value="testRole" />
+=======
+      <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
+      <option name="METHOD_NAME" value="test01" />
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="TestMapper.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="TestMapper.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
@@ -127,7 +176,11 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.f4" />
       <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
+<<<<<<< HEAD
       <option name="METHOD_NAME" value="testAll" />
+=======
+      <option name="METHOD_NAME" value="test02" />
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,9 +213,14 @@
       <list>
         <item itemvalue="JUnit.testZFPro.test01" />
         <item itemvalue="JUnit.TestMapper.testAll" />
+        <item itemvalue="JUnit.TestMapper.test02" />
+        <item itemvalue="JUnit.TestMapper.test01" />
         <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testRole" />
         <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testEmp" />
+<<<<<<< HEAD
         <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testDept" />
+=======
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
       </list>
     </recent_temporary>
   </component>
@@ -181,8 +239,13 @@
       <workItem from="1654600124277" duration="117000" />
       <workItem from="1654600262149" duration="211000" />
       <workItem from="1654600494555" duration="153000" />
+<<<<<<< HEAD
       <workItem from="1654600668001" duration="48446000" />
       <workItem from="1654743237073" duration="8537000" />
+=======
+      <workItem from="1654600668001" duration="84685000" />
+      <workItem from="1654826292010" duration="90000" />
+>>>>>>> 103866d (2022.6.10裴永鹏提交)
     </task>
     <servers />
   </component>

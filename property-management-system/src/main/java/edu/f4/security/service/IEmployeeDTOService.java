@@ -1,4 +1,4 @@
-package edu.f4.service;
+package edu.f4.security.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 

@@ -1,13 +1,11 @@
 package edu.f4.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import edu.f4.dto.Result;
+import edu.f4.result.Result;
 import edu.f4.pojo.EmployeeInfo;
 import edu.f4.service.IEmployeeInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpSession;
 
 /**
  * @author PeiYP
@@ -29,7 +27,7 @@ public class EmployeeInfoController {
     }
 
     @PostMapping
-    public Result addEmployee(EmployeeInfo employeeInfo) {
+    public Result addEmployee(@RequestBody EmployeeInfo employeeInfo) {
         boolean save = employeeInfoService.save(employeeInfo);
 
         return Result.ok(save);
@@ -37,7 +35,7 @@ public class EmployeeInfoController {
 
 
     @PutMapping
-    public Result updateEmployee(EmployeeInfo employeeInfo) {
+    public Result updateEmployee(@RequestBody EmployeeInfo employeeInfo) {
         boolean update = employeeInfoService.updateById(employeeInfo);
         return Result.ok(update);
     }

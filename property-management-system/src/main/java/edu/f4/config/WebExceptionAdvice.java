@@ -1,6 +1,6 @@
 package edu.f4.config;
 
-import edu.f4.dto.Result;
+import edu.f4.result.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

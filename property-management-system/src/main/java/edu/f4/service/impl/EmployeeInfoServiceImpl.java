@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import edu.f4.dto.EmployeeDTO;
 import edu.f4.dto.LoginFormDTO;
-import edu.f4.dto.Result;
+import edu.f4.result.Result;
 import edu.f4.mapper.EmployeeInfoMapper;
 import edu.f4.pojo.EmployeeInfo;
 import edu.f4.service.IEmployeeInfoService;
@@ -35,34 +35,7 @@ public class EmployeeInfoServiceImpl extends ServiceImpl<EmployeeInfoMapper, Emp
         return page;
     }
 
-    @Override
-    public Result login(LoginFormDTO loginFormDTO, HttpSession session) {
 
-        Integer empNum = loginFormDTO.getEmpNum();
-        String empPwd = loginFormDTO.getEmpPwd();
-
-        EmployeeInfo emp = employeeInfoMapper.getEmpAndRoleAndPermsByEmpNum(empNum);
-
-        if (emp == null) {
-            return Result.fail("用户不存在");
-        }
-
-        if (!emp.getEmpPwd().equals(empPwd)) {
-            return Result.fail("密码错误");
-        }
-
-        // 生成登录令牌
-        String token = UUID.randomUUID().toString(true);
-        // 将emp转为empDTO存储
-        EmployeeDTO empDTO = BeanUtil.copyProperties(emp, EmployeeDTO.class);
-        empDTO.setToken(token);
-        // 存储
-        //Map<String, Object> empMap = BeanUtil.beanToMap(empDTO, new HashMap<>(),
-        //        CopyOptions.create().setIgnoreNullValue(true).setFieldValueEditor((fieldName, fieldValue) -> fieldValue.toString()));
-
-        return Result.ok(empDTO);
-
-    }
 
 
 }

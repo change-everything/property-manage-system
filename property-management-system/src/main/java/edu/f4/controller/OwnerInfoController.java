@@ -1,7 +1,7 @@
 package edu.f4.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import edu.f4.dto.Result;
+import edu.f4.result.Result;
 import edu.f4.pojo.OwnerInfo;
 import edu.f4.service.IOwnerInfoService;
 import org.springframework.beans.factory.annotation.Autowired;

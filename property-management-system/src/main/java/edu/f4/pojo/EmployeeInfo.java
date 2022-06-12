@@ -1,6 +1,7 @@
 package edu.f4.pojo;
 import com.alibaba.druid.sql.visitor.functions.Char;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -35,9 +36,11 @@ public class EmployeeInfo {
     private String empPwd;
 
     // 员工角色
+    @TableField(select = false)
     private RoleGroup role;
 
     // 员工权限
-    private Permissions perms;
+    @TableField(select = false)
+    private List<Permissions> perms;
 
 }

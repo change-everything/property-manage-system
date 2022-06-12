@@ -1,6 +1,7 @@
 package edu.f4.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import edu.f4.pojo.Permissions;
 import edu.f4.pojo.RoleGroup;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,8 +21,8 @@ public class EmployeeDTO implements UserDetails {
     private Integer empId;
     private Integer empNum;
     private String empPwd;
-    private String roleName;
-    private String rolePer;
+    //private String roleName;
+    private List<Permissions> permCode;
     private String token;
 
     private List<RoleGroup> roles = new ArrayList<>();
