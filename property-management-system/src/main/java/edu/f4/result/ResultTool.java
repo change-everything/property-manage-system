@@ -1,5 +1,7 @@
 package edu.f4.result;
 
+import edu.f4.enumEntity.ResultCode;
+
 /**
  * @author PeiYP
  * @since 2022年06月09日 15:58

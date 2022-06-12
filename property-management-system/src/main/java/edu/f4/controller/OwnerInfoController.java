@@ -24,20 +24,20 @@ public class OwnerInfoController {
 
     // 添加业主信息 post请求
     @PostMapping
-    public Result addOwner(OwnerInfo ownerInfo) {
-        return Result.ok(ownerInfoService.save(ownerInfo));
+    public Result addOwner(@RequestBody OwnerInfo ownerInfo) {
+        return Result.ok(ownerInfoService.save(ownerInfo) ? "添加成功" : "添加失败");
     }
 
     // 修改业主信息 put请求
     @PutMapping
-    public Result updateOwner(OwnerInfo ownerInfo) {
-        return Result.ok(ownerInfoService.updateById(ownerInfo));
+    public Result updateOwner(@RequestBody OwnerInfo ownerInfo) {
+        return Result.ok(ownerInfoService.updateById(ownerInfo) ? "修改成功" : "修改失败");
     }
 
     // 根据id删除业主信息 delete请求
     @DeleteMapping("/{id}")
     public Result delOwner(@PathVariable  Integer id) {
-        return Result.ok(ownerInfoService.removeById(id));
+        return Result.ok(ownerInfoService.removeById(id) ? "删除成功" : "删除失败");
     }
 
     // 单查 get请求
@@ -59,8 +59,19 @@ public class OwnerInfoController {
 
 
 
-    @RequestMapping("/{currentPage}/{pageSize}")
+    @GetMapping("/{currentPage}/{pageSize}")
     public Result selectPageVo(@PathVariable int currentPage, @PathVariable int pageSize, OwnerInfo ownerInfo) {
+
+        IPage<OwnerInfo> page = ownerInfoService.getPage(currentPage, pageSize, ownerInfo);
+        // 如果当前页码值大于最大页码值，那么需要执行查询操作，使用最大页码值代替当前页码值
+        if (currentPage > page.getPages()) {
+            page = ownerInfoService.getPage((int) page.getPages(), pageSize, ownerInfo);
+        }
+        return Result.ok(page);
+    }
+
+    @PostMapping("/{currentPage}/{pageSize}")
+    public Result selectPageVoLike(@PathVariable int currentPage, @PathVariable int pageSize, @RequestBody OwnerInfo ownerInfo) {
 
         IPage<OwnerInfo> page = ownerInfoService.getPage(currentPage, pageSize, ownerInfo);
         // 如果当前页码值大于最大页码值，那么需要执行查询操作，使用最大页码值代替当前页码值

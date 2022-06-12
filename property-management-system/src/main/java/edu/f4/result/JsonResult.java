@@ -1,5 +1,6 @@
 package edu.f4.result;
 
+import edu.f4.enumEntity.ResultCode;
 import lombok.Data;
 
 import java.io.Serializable;

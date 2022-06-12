@@ -8,9 +8,9 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     # manager_system
-    url: jdbc:mysql://localhost:3306/management_system?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/manager_system?useSSL=false&serverTimezone=UTC
     username: root
-    password: root
+    password: 123456
   redis:
     host: 192.168.216.133
     port: 6379

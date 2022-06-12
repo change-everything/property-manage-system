@@ -3,6 +3,7 @@ package edu.f4.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import edu.f4.pojo.ChargeInfo;
+import edu.f4.result.Result;
 
 import java.util.List;
 
@@ -12,6 +13,8 @@ public interface IChargeInfoService extends IService<ChargeInfo> {
     List<ChargeInfo> queryChargeInfoByStatus(Integer status);
 
 
-    boolean updateStatus(ChargeInfo chargeInfo);
+    boolean updateStatus(Integer charId);
+
+    Result getChargeByRoomNum(Integer roomNum);
 
 }

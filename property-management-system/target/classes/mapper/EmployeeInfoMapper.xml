@@ -25,6 +25,22 @@
         </collection>
     </resultMap>
 
+
+    <resultMap id="empAndDept" type="employeeInfo">
+        <id property="empId" column="emp_id"/>
+        <result property="empNum" column="emp_num"/>
+        <result property="address" column="address"/>
+        <result property="empName" column="emp_name"/>
+        <result property="birthDate" column="birth_date"/>
+        <result property="gender" column="gender"/>
+        <result property="phone" column="phone"/>
+        <result property="job" column="job"/>
+        <result property="empPwd" column="emp_pwd"/>
+        <association property="departmentInfo" javaType="departmentInfo">
+            <id property="depName" column="dep_name"/>
+        </association>
+    </resultMap>
+
     <select id="getEmpAndRoleAndPermsByEmpNum" resultMap="empNumAndRoleAndPerms">
         select <include refid="empAndRoleAndPermsSql"/> from employee_info as ei
                 left join emp_conn_role as ecr on ei.emp_id = ecr.emp_id
@@ -36,6 +52,26 @@
 
     <select id="queryByEmpNum" resultType="employeeInfo">
         select * from employee_info where emp_num = #{empNum}
+    </select>
+
+
+    <select id="queryEmpAndDeptLike" resultMap="empAndDept">
+        select * from employee_info as ei left join department_info as di
+                    on ei.emp_dept_num = di.dept_num
+                <where>
+                    <if test="empNum != null">
+                        emp_num = #{empNum}
+                    </if>
+
+                    <if test="phone != null">
+                        phone = #{phone}
+                    </if>
+
+                    <if test="empDepNum != null">
+                        emp_dep_num = #{empDepNum}
+                    </if>
+
+                </where>
     </select>
 
 </mapper>

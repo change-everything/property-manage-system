@@ -3,13 +3,11 @@ package edu.f4.security;
 import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import edu.f4.dto.EmpDTO;
-import edu.f4.dto.EmployeeDTO;
+import edu.f4.dto.EmpLoginDTO;
 import edu.f4.mapper.EmployeeInfoMapper;
 import edu.f4.pojo.EmployeeInfo;
 import edu.f4.result.JsonResult;
-import edu.f4.result.Result;
-import edu.f4.result.ResultCode;
+import edu.f4.enumEntity.ResultCode;
 import edu.f4.result.ResultTool;
 import edu.f4.utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author PeiYP
@@ -45,7 +41,7 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
 
         EmployeeInfo emp = mapper.getEmpAndRoleAndPermsByEmpNum(employeeInfo.getEmpNum());
 
-        EmpDTO empDTO = BeanUtil.copyProperties(emp, EmpDTO.class);
+        EmpLoginDTO empDTO = BeanUtil.copyProperties(emp, EmpLoginDTO.class);
 
         // 根据用户的id和account生成token并返回
         String jwtToken = JwtUtil.getJwtToken(employeeInfo.getEmpId().toString(), employeeInfo.getEmpNum().toString());

@@ -11,4 +11,8 @@
                 where ei.emp_id = #{empId}
     </select>
 
+    <insert id="grantAuthorityByRoleId" parameterType="roleConnPerm">
+        insert into role_conn_perm values (null, #{roleId}, #{permId})
+    </insert>
+
 </mapper>

@@ -1,4 +1,5 @@
 package edu.f4.pojo;
+
 import com.alibaba.druid.sql.visitor.functions.Char;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -17,23 +18,31 @@ import java.util.List;
 @NoArgsConstructor
 @TableName(value = "employee_info")//员工信息表
 public class EmployeeInfo {
+
     @TableId(type = IdType.AUTO)
     private Integer empId;
-
-    //员工号
+    // 员工号
     private Integer empNum;
-    //员工姓名
+    // 员工姓名
     private String empName;
-    //出生日期
+    // 出生日期
     private Date birthDate;
-    //员工性别
-    private Char gender;
-    //员工住址
+    // 员工性别
+    private String gender;
+    // 员工住址
     private String address;
-    //员工部门号
+    // 员工部门号
     private Integer empDepNum;
-    //员工密码
+    // 员工电话
+    private String phone;
+    // 员工职务
+    private String job;
+    // 员工密码
     private String empPwd;
+
+    // 部门信息
+    @TableField(select = false)
+    private DepartmentInfo departmentInfo;
 
     // 员工角色
     @TableField(select = false)

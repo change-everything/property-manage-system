@@ -2,8 +2,7 @@ package edu.f4.security;
 
 import com.alibaba.fastjson.JSON;
 import edu.f4.result.JsonResult;
-import edu.f4.result.Result;
-import edu.f4.result.ResultCode;
+import edu.f4.enumEntity.ResultCode;
 import edu.f4.result.ResultTool;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;

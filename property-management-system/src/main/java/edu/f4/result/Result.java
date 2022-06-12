@@ -1,5 +1,6 @@
 package edu.f4.result;
 
+import edu.f4.enumEntity.ResultCode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

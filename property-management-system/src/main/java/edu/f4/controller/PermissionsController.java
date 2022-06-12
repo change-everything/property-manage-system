@@ -1,8 +1,7 @@
 package edu.f4.controller;
 
-import edu.f4.dto.Result;
-import edu.f4.pojo.DepartmentInfo;
 import edu.f4.pojo.Permissions;
+import edu.f4.result.Result;
 import edu.f4.service.IDepartmentInfoService;
 import edu.f4.service.IPermissionsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +18,12 @@ public class PermissionsController {
     private IPermissionsService permissionsService;
 
     @PostMapping
-    public Result addPerm(Permissions permissions) {
+    public Result addPerm(@RequestBody Permissions permissions) {
         return Result.ok(permissionsService.save(permissions));
     }
 
     @PutMapping
-    public Result updatePerm(Permissions permissions) {
+    public Result updatePerm(@RequestBody Permissions permissions) {
         return Result.ok(permissionsService.updateById(permissions));
     }
 

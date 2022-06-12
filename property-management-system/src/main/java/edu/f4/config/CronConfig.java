@@ -16,8 +16,7 @@ public class CronConfig {
 
     private CorsConfiguration buildConfig() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        //  你需要跨域的地址  注意这里的 127.0.0.1 != localhost
-
+        //  需要跨域的地址
         // * 表示对所有的地址都可以访问
         corsConfiguration.addAllowedOrigin("*");  // 1
         //  跨域的请求头

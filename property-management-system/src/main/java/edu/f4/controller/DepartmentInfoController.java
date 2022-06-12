@@ -1,10 +1,10 @@
 package edu.f4.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import edu.f4.dto.Result;
 import edu.f4.pojo.ChargeInfo;
 import edu.f4.pojo.DepartmentInfo;
 import edu.f4.pojo.OwnerInfo;
+import edu.f4.result.Result;
 import edu.f4.service.IChargeInfoService;
 import edu.f4.service.IDepartmentInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,18 +21,18 @@ public class DepartmentInfoController {
     private IDepartmentInfoService departmentInfoService;
 
     @PostMapping
-    public Result addDept(DepartmentInfo departmentInfo) {
+    public Result addDept(@RequestBody DepartmentInfo departmentInfo) {
         return Result.ok(departmentInfoService.save(departmentInfo));
     }
 
     @PutMapping
-    public Result updateDept(DepartmentInfo departmentInfo) {
+    public Result updateDept(@RequestBody DepartmentInfo departmentInfo) {
         return Result.ok(departmentInfoService.updateById(departmentInfo));
     }
 
-    @DeleteMapping("/{id}")
-    public Result delDept(@PathVariable  Integer id) {
-        return Result.ok(departmentInfoService.removeById(id));
+    @DeleteMapping("/{deptId}")
+    public Result delDept(@PathVariable  Integer deptId) {
+        return Result.ok(departmentInfoService.deleteDeptById(deptId));
     }
 
     @GetMapping("/{id}")

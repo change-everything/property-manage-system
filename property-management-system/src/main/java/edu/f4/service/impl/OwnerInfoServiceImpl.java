@@ -21,7 +21,8 @@ public class OwnerInfoServiceImpl extends ServiceImpl<OwnerInfoMapper, OwnerInfo
     public IPage<OwnerInfo> getPage(int currentPage, int pageSize, OwnerInfo ownerInfo) {
         LambdaQueryWrapper<OwnerInfo> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.like(Strings.isNotEmpty(ownerInfo.getOwnerName()), OwnerInfo::getOwnerName, ownerInfo.getOwnerName());
-        queryWrapper.like(Strings.isNotEmpty(ownerInfo.getPhoneNumber()), OwnerInfo::getPhoneNumber, ownerInfo.getPhoneNumber());
+        queryWrapper.like(ownerInfo.getOwnerNum() != null, OwnerInfo::getOwnerNum, ownerInfo.getOwnerNum());
+        queryWrapper.like(ownerInfo.getRoomNum() != null, OwnerInfo::getRoomNum, ownerInfo.getRoomNum());
 
         IPage<OwnerInfo> page = new Page<>(currentPage, pageSize);
         ownerInfoMapper.selectPage(page, queryWrapper);

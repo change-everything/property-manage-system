@@ -1,9 +1,9 @@
 package edu.f4.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import edu.f4.dto.Result;
 import edu.f4.pojo.ChargeInfo;
 import edu.f4.pojo.OwnerInfo;
+import edu.f4.result.Result;
 import edu.f4.service.IChargeInfoService;
 import edu.f4.service.IOwnerInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +20,12 @@ public class ChargeInfoController {
     private IChargeInfoService chargeInfoService;
 
     @PostMapping
-    public Result addCharge(ChargeInfo chargeInfo) {
+    public Result addCharge(@RequestBody ChargeInfo chargeInfo) {
         return Result.ok(chargeInfoService.save(chargeInfo));
     }
 
     @PutMapping
-    public Result updateCharge(ChargeInfo chargeInfo) {
+    public Result updateCharge(@RequestBody ChargeInfo chargeInfo) {
         return Result.ok(chargeInfoService.updateById(chargeInfo));
     }
 
@@ -63,9 +63,16 @@ public class ChargeInfoController {
         return Result.ok(chargeInfoService.queryChargeInfoByStatus(status));
     }
 
-    @PutMapping("/status")
-    public Result updateStatus(ChargeInfo chargeInfo) {
-        return Result.ok(chargeInfoService);
+    @PutMapping("/status/update/{chaId}")
+    public Result updateStatus(@PathVariable Integer chaId) {
+        return Result.ok(chargeInfoService.updateStatus(chaId));
     }
+
+
+    @GetMapping("/bill/{roomNum}")
+    public Result getChargeByRoomNum(@PathVariable Integer roomNum) {
+        return chargeInfoService.getChargeByRoomNum(roomNum);
+    }
+
 
 }

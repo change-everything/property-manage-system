@@ -4,13 +4,43 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.f4.mapper.ChargeInfoMapper">
 
+
+    <resultMap id="charge" type="chargeInfo">
+        <id property="chaId" column="cha_id"/>
+        <result property="roomNum" column="room_num"/>
+        <result property="chaType" column="cha_type"/>
+        <result property="chaQuantity" column="cha_quantity"/>
+        <result property="chaSum" column="cha_sum"/>
+        <result property="empNum" column="emp_num"/>
+        <result property="chaDate" column="cha_date"/>
+        <association property="ownerInfo" javaType="ownerInfo">
+            <result property="ownerName" column="owner_name"/>
+        </association>
+    </resultMap>
+
     <select id="queryChargeInfoByStatus" resultType="chargeInfo">
         select * from charge_info where status = #{status}
     </select>
 
-    <update id="updateStatus">
-        update  charge_info set status=1 where cha_Id = #{chaId}
+    <update id="updateStatusById">
+        update charge_info set status=1 where cha_Id = #{chaId}
     </update>
+
+
+    <select id="getChargeByRoomNum" resultMap="charge">
+        SELECT ci.cha_id,
+                ci.room_num,
+                oi.owner_name,
+                ci.cha_type,
+                ci.cha_quantity,
+                ci.cha_sum,
+                ci.emp_num,
+                ci.cha_date
+        FROM `charge_info` as ci
+                 LEFT JOIN owner_info as oi
+                           ON ci.owner_num = oi.owner_num
+        WHERE ci.room_num = #{roomNum}
+    </select>
 
 
 

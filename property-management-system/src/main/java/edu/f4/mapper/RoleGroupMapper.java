@@ -9,4 +9,7 @@ public interface RoleGroupMapper extends BaseMapper<RoleGroup> {
 
     RoleGroup getByEmpId(Integer empId);
 
+    boolean grantAuthorityByRoleId(Integer roleId, Integer permId);
+
+
 }

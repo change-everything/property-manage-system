@@ -15,6 +15,8 @@ public interface ChargeInfoMapper extends BaseMapper<ChargeInfo> {
     List<ChargeInfo> queryChargeInfoByStatus(Integer status);
 
     // TODO: 2022/6/9  实现按id查询并修改字段
-    boolean updateStatusById(ChargeInfo chargeInfo);
+    boolean updateStatusById(Integer chaId);
+
+    List<ChargeInfo> getChargeByRoomNum(Integer roomNum);
 
 }

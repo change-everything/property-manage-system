@@ -1,5 +1,6 @@
 package edu.f4.pojo;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -21,13 +22,14 @@ public class ChargeInfo {
     //收费日期
     private String chaDate;
     //收费类型
-    private  String chaType;
+    private String chaType;
     //收费数量
     private Integer chaQuantity;
     //收费金额
     private String chaSum;
     //员工号
-    private  Integer empNum;
-    //状态
-    private Integer status;
+    private Integer empNum;
+
+    @TableField(select = false)
+    private OwnerInfo ownerInfo;
 }
