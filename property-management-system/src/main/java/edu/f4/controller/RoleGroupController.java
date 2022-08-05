@@ -34,13 +34,13 @@ public class RoleGroupController {
         return Result.ok(roleGroupService.removeById(id));
     }
 
-    @GetMapping("/{id}")
-    public Result queryById(@PathVariable("id") Integer id){
-        RoleGroup roleGroup = roleGroupService.getById(id);
-        if (roleGroup == null) {
+    @GetMapping("/{depNum}")
+    public Result queryByNum(@PathVariable("depNum") Integer depNum){
+        List<RoleGroup> roleGroups = roleGroupService.getRoleByDeptNum(depNum);
+        if (roleGroups == null) {
             return Result.fail("不存在此角色");
         }
-        return Result.ok(roleGroup);
+        return Result.ok(roleGroups);
     }
 
     @GetMapping
@@ -53,8 +53,16 @@ public class RoleGroupController {
     @PostMapping("/{roleId}")
     public Result grantAuthorityByRoleId(@RequestBody IdListDTO idListDTO, @PathVariable Integer roleId) {
 
-        roleGroupService.grantAuthorityByRoleId(roleId, idListDTO.getPermIds());
-        return Result.ok();
+        boolean b = roleGroupService.grantAuthorityByRoleId(roleId, idListDTO.getPermIds());
+        return Result.ok(b);
     }
+
+    @GetMapping("/perm/{roleId}")
+    public Result getPermIds(@PathVariable Integer roleId) {
+        List<Integer> permIds = roleGroupService.getPermIds(roleId);
+
+        return Result.ok(permIds);
+    }
+
 
 }

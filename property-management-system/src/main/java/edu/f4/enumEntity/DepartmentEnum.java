@@ -20,9 +20,7 @@ public enum DepartmentEnum {
 
     PENDING("待分配", 900);
 
-    /**
-     * 根据code获取message
-     */
+
     /**
      * 根据code获取message
      */

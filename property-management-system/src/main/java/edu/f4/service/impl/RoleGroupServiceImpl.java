@@ -29,6 +29,16 @@ public class RoleGroupServiceImpl extends ServiceImpl<RoleGroupMapper, RoleGroup
 
     }
 
+    @Override
+    public List<RoleGroup> getRoleByDeptNum(Integer depNum) {
+
+        return query().eq("dep_num", depNum).list();
+    }
+
+    @Override
+    public List<Integer> getPermIds(Integer roleId) {
+        return roleGroupMapper.getPermIds(roleId);
+    }
 
 
 }

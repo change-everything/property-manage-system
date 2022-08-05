@@ -27,6 +27,18 @@ public enum JobEnum {
         return null;
     }
 
+    /**
+     * 根据message获取code
+     */
+    public static Integer getMessageByName(String name) {
+        for (JobEnum ele : values()) {
+            if (ele.getJobName().equals(name)) {
+                return ele.getJobCode();
+            }
+        }
+        return null;
+    }
+
     public String getJobName() {
         return jobName;
     }

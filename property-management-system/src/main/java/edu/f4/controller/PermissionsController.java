@@ -2,6 +2,7 @@ package edu.f4.controller;
 
 import edu.f4.pojo.Permissions;
 import edu.f4.result.Result;
+import edu.f4.result.TreeNode;
 import edu.f4.service.IDepartmentInfoService;
 import edu.f4.service.IPermissionsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,8 +44,11 @@ public class PermissionsController {
 
     @GetMapping
     public Result queryAll() {
-        List<Permissions> permissionsList = permissionsService.list();
-        return Result.ok(permissionsList);
+
+        List<TreeNode> treeNodes = permissionsService.queryAllFormTree();
+
+        return Result.ok(treeNodes);
+
     }
 
 }

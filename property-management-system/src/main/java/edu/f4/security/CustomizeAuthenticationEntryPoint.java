@@ -18,7 +18,6 @@ import java.io.IOException;
  * @since 2022年06月09日 11:35
  * 未登录
  */
-
 @Component
 public class CustomizeAuthenticationEntryPoint implements AuthenticationEntryPoint {
 

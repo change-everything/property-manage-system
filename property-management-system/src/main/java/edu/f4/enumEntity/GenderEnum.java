@@ -25,6 +25,17 @@ public enum GenderEnum {
         return null;
     }
 
+    /**
+     * 根据message获取code
+     */
+    public static Integer getMessageByName(String name) {
+        for (GenderEnum ele : values()) {
+            if (ele.getGenderName().equals(name)) {
+                return ele.getGenderCode();
+            }
+        }
+        return null;
+    }
     public String getGenderName() {
         return genderName;
     }

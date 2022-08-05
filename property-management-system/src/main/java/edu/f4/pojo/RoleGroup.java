@@ -19,11 +19,15 @@ import java.util.List;
 public class RoleGroup implements GrantedAuthority {
     @TableId(type = IdType.AUTO)
     private Integer roleId;
+
     //员工角色
     private String roleName;
 
     // 角色描述
     private String roleDest;
+
+
+    private Integer depNum;
 
 
     @JsonIgnore

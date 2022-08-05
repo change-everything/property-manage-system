@@ -18,7 +18,6 @@ import java.io.IOException;
  * @since 2022年06月09日 12:41
  * 退出登录
  */
-
 @Component
 public class CustomizeLogoutSuccessHandler implements LogoutSuccessHandler {
     @Override
@@ -27,6 +26,4 @@ public class CustomizeLogoutSuccessHandler implements LogoutSuccessHandler {
         httpServletResponse.setContentType("text/json;charset=utf-8");
         httpServletResponse.getWriter().write(JSON.toJSONString(result));
     }
-
-
 }

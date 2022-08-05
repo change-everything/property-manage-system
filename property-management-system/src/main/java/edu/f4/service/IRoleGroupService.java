@@ -8,4 +8,8 @@ import java.util.List;
 public interface IRoleGroupService extends IService<RoleGroup> {
     boolean grantAuthorityByRoleId(Integer roleId, List<Integer> permIds);
 
+    List<RoleGroup> getRoleByDeptNum(Integer depNum);
+
+    List<Integer> getPermIds(Integer roleId);
+
 }

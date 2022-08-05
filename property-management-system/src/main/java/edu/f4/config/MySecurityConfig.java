@@ -2,7 +2,7 @@ package edu.f4.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.f4.result.Result;
-import edu.f4.security.*;
+import edu.f4.security.CustomizeAccessDeniedHandler;
 import edu.f4.security.filter.CustomizeAbstractSecurityInterceptor;
 import edu.f4.security.filter.CustomizeAccessDecisionManager;
 import edu.f4.security.filter.CustomizeFilterInvocationSecurityMetadataSource;
@@ -13,12 +13,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -94,10 +91,11 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticationEntryPoint(authenticationEntryPoint)
                 .accessDeniedHandler(customizeAccessDeniedHandler)
                 .and()
-                .formLogin()  // 登录
+                .formLogin().loginPage("/login").successForwardUrl("/")// 登录
                 .permitAll()  //允许所有用户
                 .successHandler(authenticationSuccessHandler)  //登录成功处理逻辑
                 .failureHandler(authenticationFailureHandler)  //登录失败处理逻辑
+                .and().rememberMe().tokenValiditySeconds(60)
                 .and()
                 .logout()      // 退出
                 .permitAll()   //允许所有用户

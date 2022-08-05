@@ -11,15 +11,20 @@ import edu.f4.dto.EmpAndDeptDTO;
 import edu.f4.dto.EmployeeDTO;
 import edu.f4.dto.LoginFormDTO;
 import edu.f4.enumEntity.DepartmentEnum;
+import edu.f4.enumEntity.GenderEnum;
 import edu.f4.result.Result;
 import edu.f4.mapper.EmployeeInfoMapper;
 import edu.f4.pojo.EmployeeInfo;
 import edu.f4.service.IEmployeeInfoService;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpSession;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,19 +34,10 @@ public class EmployeeInfoServiceImpl extends ServiceImpl<EmployeeInfoMapper, Emp
     @Autowired
     private EmployeeInfoMapper employeeInfoMapper;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
-    //@Override
-    //public IPage<EmployeeInfo> getPage(int currentPage, int pageSize, EmployeeInfo employeeInfo) {
-    //    LambdaQueryWrapper<EmployeeInfo> queryWrapper = new LambdaQueryWrapper<>();
-    //    queryWrapper.like(employeeInfo.getEmpNum() != null, EmployeeInfo::getEmpNum, employeeInfo.getEmpNum());
-    //    queryWrapper.like(Strings.isNotEmpty(employeeInfo.getPhone()), EmployeeInfo::getPhone, employeeInfo.getPhone());
-    //    queryWrapper.like(employeeInfo.getEmpDepNum() != null, EmployeeInfo::getEmpDepNum, employeeInfo.getEmpDepNum());
-    //
-    //    IPage<EmployeeInfo> page = new Page<>(currentPage, pageSize);
-    //    IPage<EmpAndDeptDTO> page1 = new Page<>(currentPage, pageSize);
-    //    employeeInfoMapper.selectPage(page, queryWrapper);
-    //    return page;
-    //}
+
     @Override
     public IPage<EmpAndDeptDTO> getPage(int currentPage, int pageSize, EmployeeInfo employeeInfo) {
         LambdaQueryWrapper<EmployeeInfo> queryWrapper = new LambdaQueryWrapper<>();
@@ -49,19 +45,28 @@ public class EmployeeInfoServiceImpl extends ServiceImpl<EmployeeInfoMapper, Emp
         queryWrapper.like(Strings.isNotEmpty(employeeInfo.getPhone()), EmployeeInfo::getPhone, employeeInfo.getPhone());
         queryWrapper.like(employeeInfo.getEmpDepNum() != null, EmployeeInfo::getEmpDepNum, employeeInfo.getEmpDepNum());
 
+
         IPage<EmployeeInfo> page = new Page<>(currentPage, pageSize);
+        employeeInfoMapper.selectPage(page, queryWrapper);
         IPage<EmpAndDeptDTO> page1 = new Page<>(currentPage, pageSize);
         page1.setPages(page.getPages());
         page1.setCurrent(page.getCurrent());
         page1.setSize(page.getSize());
         page1.setTotal(page.getTotal());
-        employeeInfoMapper.selectPage(page, queryWrapper);
 
         List<EmployeeInfo> records = page.getRecords();
+
         ArrayList<EmpAndDeptDTO> empAndDept = new ArrayList<>();
         for (EmployeeInfo info : records) {
+
+            EmployeeInfo empRole = employeeInfoMapper.getEmpRole(info.getEmpId());
+
             EmpAndDeptDTO empAndDeptDTO = BeanUtil.copyProperties(info, EmpAndDeptDTO.class);
             empAndDeptDTO.setEmpDepName(DepartmentEnum.getMessageByCode(info.getEmpDepNum().toString()));
+            if (empRole.getRole() != null) {
+                empAndDeptDTO.setRoleDest(empRole.getRole().getRoleDest());
+            }
+
             empAndDept.add(empAndDeptDTO);
         }
 
@@ -69,9 +74,43 @@ public class EmployeeInfoServiceImpl extends ServiceImpl<EmployeeInfoMapper, Emp
         return page1;
     }
 
+    @Override
+    public EmployeeInfo getEmpAndDept(Integer empId) {
 
 
+        return employeeInfoMapper.getEmpAndDept(empId);
 
+    }
+
+
+    @Transactional
+    @Override
+    public boolean addEmployee(EmployeeInfo employeeInfo, Integer roleId) {
+
+        setInfo(employeeInfo);
+
+        save(employeeInfo);
+
+        return employeeInfoMapper.insertEmpConnRole(employeeInfo.getEmpId(), roleId);
+    }
+
+    @Override
+    public boolean updateEmployee(EmployeeInfo employeeInfo, Integer roleId) {
+
+        setInfo(employeeInfo);
+
+        updateById(employeeInfo);
+
+        return employeeInfoMapper.updateEmpRole(employeeInfo.getEmpId(), roleId);
+    }
+
+    private void setInfo(EmployeeInfo employeeInfo) {
+        employeeInfo.setEmpPwd(passwordEncoder.encode(employeeInfo.getEmpPwd()));
+
+        employeeInfo.setGender(GenderEnum.getMessageByCode(employeeInfo.getGender()));
+        String[] ts = employeeInfo.getBirthDate().split("T");
+        employeeInfo.setBirthDate(ts[0]);
+    }
 
 
 }

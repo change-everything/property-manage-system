@@ -24,6 +24,7 @@ public class EmployeeDTO implements UserDetails {
     //private String roleName;
     private List<Permissions> permCode;
     private String token;
+    private String empName;
 
     private List<RoleGroup> roles = new ArrayList<>();
 

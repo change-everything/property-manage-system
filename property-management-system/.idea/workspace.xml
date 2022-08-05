@@ -4,7 +4,101 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment="2022.6.7第一次上传" />
+    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment="2022.6.12裴永鹏上传">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/CronConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/MySecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/config/MySecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/ChargeInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/ChargeInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/EmployeeInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/EmployeeInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/PermissionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/PermissionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/RoleGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/RoleGroupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpAndDeptDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpAndDeptDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpLoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpLoginDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmployeeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/IdListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/IdListDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/DepartmentEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/DepartmentEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/GenderEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/GenderEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/JobEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/JobEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/EmployeeInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/EmployeeInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/RoleGroupMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/RoleGroupMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/ChargeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/ChargeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/EmployeeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/EmployeeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/Permissions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/RoleGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/RoleGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeLogoutSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeLogoutSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IChargeInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IChargeInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IEmployeeInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IEmployeeInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IPermissionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IPermissionsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IRoleGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IRoleGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/ChargeInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/ChargeInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/DepartmentInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/DepartmentInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/EmployeeInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/EmployeeInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/PermissionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/PermissionsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/RoleGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/RoleGroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/utils/UserHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/charge_info.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/department_info.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/emp_conn_role.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/employee_info.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/owner_info.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/permissions.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/role_conn_perm.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/role_group.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PermissionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PermissionsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RoleGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoleGroupMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/f4/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/f4/TestMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/CronConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/ChargeInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/ChargeInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/EmployeeInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/EmployeeInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/PermissionsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/PermissionsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/RoleGroupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/RoleGroupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpAndDeptDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpAndDeptDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpLoginDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpLoginDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmployeeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmployeeDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/IdListDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/IdListDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/DepartmentEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/DepartmentEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/GenderEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/GenderEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/JobEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/JobEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/EmployeeInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/mapper/EmployeeInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/RoleGroupMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/mapper/RoleGroupMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/ChargeInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/ChargeInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/EmployeeInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/EmployeeInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/Permissions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/Permissions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/RoleGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/RoleGroup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeAuthenticationSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeAuthenticationSuccessHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IChargeInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IChargeInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IEmployeeInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IEmployeeInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IPermissionsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IPermissionsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IRoleGroupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IRoleGroupService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/ChargeInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/ChargeInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/DepartmentInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/DepartmentInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/EmployeeInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/EmployeeInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/PermissionsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/PermissionsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/RoleGroupServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/RoleGroupServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EmployeeInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/EmployeeInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PermissionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/PermissionsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/RoleGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/RoleGroupMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/property-management-system-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/property-management-system-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/f4/TestMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/f4/TestMapper.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +108,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="mybatis-config" />
-        <option value="Interface" />
         <option value="mybatis-mapper" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -50,13 +145,15 @@
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/myProject/managementSystem/property-management-system&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;69b71e9240ec596207a3dbefa5a0ff10&quot;
   }
 }</component>
@@ -65,52 +162,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myProject\managementSystem\property-management-system\src\main\java\edu\f4" />
       <recent name="D:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\utils" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\service\impl" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\service" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\mapper" />
-      <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\dto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.f4.utils" />
       <recent name="edu.f4.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.PropertyManagementSystemApplication">
-    <configuration name="PropertyManagementSystemApplicationTests.testEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="property-management-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.f4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.f4" />
-      <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
-      <option name="METHOD_NAME" value="testEmp" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PropertyManagementSystemApplicationTests.testEmp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" />
-    <configuration name="PropertyManagementSystemApplicationTests.testRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="property-management-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.f4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.f4" />
-      <option name="MAIN_CLASS_NAME" value="edu.f4.PropertyManagementSystemApplicationTests" />
-      <option name="METHOD_NAME" value="testRole" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PropertyManagementSystemApplicationTests.testRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" />
-    <configuration name="TestMapper.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMapper.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
@@ -120,13 +184,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.f4" />
       <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="METHOD_NAME" value="test03" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMapper.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMapper.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
@@ -136,19 +200,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.f4" />
       <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
-      <option name="METHOD_NAME" value="test02" />
+      <option name="METHOD_NAME" value="test04" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMapper.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testZFPro.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMapper.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
@@ -157,7 +215,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.f4" />
-      <option name="MAIN_CLASS_NAME" value="edu.f4.testZFPro" />
+      <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
+      <option name="METHOD_NAME" value="test05" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMapper.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="property-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.f4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.f4" />
+      <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
+      <option name="METHOD_NAME" value="test06" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRedis.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="property-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.f4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.f4" />
+      <option name="MAIN_CLASS_NAME" value="edu.f4.TestRedis" />
       <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -173,12 +263,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testZFPro.test01" />
-        <item itemvalue="JUnit.TestMapper.testAll" />
-        <item itemvalue="JUnit.TestMapper.test02" />
-        <item itemvalue="JUnit.TestMapper.test01" />
-        <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testRole" />
-        <item itemvalue="JUnit.PropertyManagementSystemApplicationTests.testEmp" />
+        <item itemvalue="JUnit.TestRedis.test01" />
+        <item itemvalue="JUnit.TestMapper.test06" />
+        <item itemvalue="JUnit.TestMapper.test05" />
+        <item itemvalue="JUnit.TestMapper.test04" />
+        <item itemvalue="JUnit.TestMapper.test03" />
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +291,17 @@
       <workItem from="1654600668001" duration="84685000" />
       <workItem from="1654826292010" duration="90000" />
       <workItem from="1655018580767" duration="84000" />
+      <workItem from="1655020857279" duration="332000" />
+      <workItem from="1655021380047" duration="5175000" />
+      <workItem from="1655040506805" duration="9300000" />
+      <workItem from="1655127661293" duration="11534000" />
+      <workItem from="1655168144913" duration="39954000" />
+      <workItem from="1655255171169" duration="85000" />
+      <workItem from="1655255279013" duration="59818000" />
+      <workItem from="1655366397239" duration="2071000" />
+      <workItem from="1655893306993" duration="69000" />
+      <workItem from="1655893748923" duration="13000" />
+      <workItem from="1659689218538" duration="1609000" />
     </task>
     <servers />
   </component>

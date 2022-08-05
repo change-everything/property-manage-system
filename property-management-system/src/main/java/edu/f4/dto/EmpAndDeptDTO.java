@@ -17,17 +17,17 @@ public class EmpAndDeptDTO {
     // 员工姓名
     private String empName;
     // 出生日期
-    private Date birthDate;
+    private String birthDate;
     // 员工性别
     private String gender;
     // 员工住址
     private String address;
     // 员工部门号
     private String empDepName;
+    // 员工角色
+    private String roleDest;
     // 员工电话
     private String phone;
-    // 员工职务
-    private String job;
     // 员工密码
     private String empPwd;
 

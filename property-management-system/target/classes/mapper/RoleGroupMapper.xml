@@ -15,4 +15,9 @@
         insert into role_conn_perm values (null, #{roleId}, #{permId})
     </insert>
 
+
+    <select id="getPermIds" resultType="int">
+        select perm_id from role_conn_perm where role_id = #{roleId}
+    </select>
+
 </mapper>

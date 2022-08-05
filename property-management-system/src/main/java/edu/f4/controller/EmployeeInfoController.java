@@ -7,9 +7,13 @@ import edu.f4.enumEntity.JobEnum;
 import edu.f4.result.Result;
 import edu.f4.pojo.EmployeeInfo;
 import edu.f4.service.IEmployeeInfoService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+
+import java.text.SimpleDateFormat;
+import java.util.Objects;
 
 /**
  * @author PeiYP
@@ -27,33 +31,27 @@ public class EmployeeInfoController {
 
     @GetMapping("/{id}")
     public Result queryOne(@PathVariable Integer id) {
-        EmployeeInfo emp = employeeInfoService.getById(id);
+        EmployeeInfo emp = employeeInfoService.getEmpAndDept(id);
+
+        emp.setGender(Objects.requireNonNull(GenderEnum.getMessageByName(emp.getGender())).toString());
 
         return Result.ok(emp);
     }
 
-    @PostMapping
-    public Result addEmployee(@RequestBody EmployeeInfo employeeInfo) {
+    @PostMapping("/{roleId}")
+    public Result addEmployee(@RequestBody EmployeeInfo employeeInfo, @PathVariable Integer roleId) {
 
-        employeeInfo.setEmpPwd(passwordEncoder.encode(employeeInfo.getEmpPwd()));
-
-        employeeInfo.setGender(GenderEnum.getMessageByCode(employeeInfo.getGender()));
-        employeeInfo.setJob(JobEnum.getMessageByCode(employeeInfo.getJob()));
-
-        boolean save = employeeInfoService.save(employeeInfo);
+        boolean save = employeeInfoService.addEmployee(employeeInfo, roleId);
 
         return Result.ok(save);
     }
 
 
-    @PutMapping
-    public Result updateEmployee(@RequestBody EmployeeInfo employeeInfo) {
-        employeeInfo.setEmpPwd(passwordEncoder.encode(employeeInfo.getEmpPwd()));
+    @PutMapping("/{roleId}")
+    public Result updateEmployee(@RequestBody EmployeeInfo employeeInfo, @PathVariable Integer roleId) {
 
-        employeeInfo.setGender(GenderEnum.getMessageByCode(employeeInfo.getGender()));
-        employeeInfo.setJob(JobEnum.getMessageByCode(employeeInfo.getJob()));
 
-        boolean update = employeeInfoService.updateById(employeeInfo);
+        boolean update = employeeInfoService.updateEmployee(employeeInfo, roleId);
         return Result.ok(update);
     }
 
@@ -63,6 +61,7 @@ public class EmployeeInfoController {
 
         return Result.ok(remove);
     }
+
 
 
     @PostMapping("/{currentPage}/{pageSize}")

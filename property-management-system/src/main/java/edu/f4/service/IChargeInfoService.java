@@ -10,10 +10,7 @@ import java.util.List;
 public interface IChargeInfoService extends IService<ChargeInfo> {
     IPage<ChargeInfo> getPage(int currentPage, int pageSize, ChargeInfo chargeInfo);
 
-    List<ChargeInfo> queryChargeInfoByStatus(Integer status);
 
-
-    boolean updateStatus(Integer charId);
 
     Result getChargeByRoomNum(Integer roomNum);
 

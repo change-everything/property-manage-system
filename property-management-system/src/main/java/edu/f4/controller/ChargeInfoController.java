@@ -24,28 +24,8 @@ public class ChargeInfoController {
         return Result.ok(chargeInfoService.save(chargeInfo));
     }
 
-    @PutMapping
-    public Result updateCharge(@RequestBody ChargeInfo chargeInfo) {
-        return Result.ok(chargeInfoService.updateById(chargeInfo));
-    }
-
-    @DeleteMapping("/{id}")
-    public Result delCharge(@PathVariable  Integer id) {
-        return Result.ok(chargeInfoService.removeById(id));
-    }
-
-    @GetMapping("/{id}")
-    public Result queryById(@PathVariable("id") Integer id){
-        ChargeInfo chargeInfo = chargeInfoService.getById(id);
-        if (chargeInfo == null) {
-            return Result.fail("无收费项目");
-        }
-        return Result.ok(chargeInfo);
-    }
-
-
     //分页
-    @RequestMapping("/{currentPage}/{pageSize}")
+    @GetMapping ("/{currentPage}/{pageSize}")
     public Result selectPageVo(@PathVariable int currentPage, @PathVariable int pageSize, ChargeInfo chargeInfo) {
 
         IPage<ChargeInfo> page = chargeInfoService.getPage(currentPage, pageSize, chargeInfo);
@@ -56,18 +36,16 @@ public class ChargeInfoController {
         return Result.ok(page);
     }
 
+    @PostMapping ("/{currentPage}/{pageSize}")
+    public Result selectPageVoLike(@PathVariable int currentPage, @PathVariable int pageSize, @RequestBody ChargeInfo chargeInfo) {
 
-    // 按状态查询
-    @GetMapping("/status/{status}")
-    public Result queryByStatus(@PathVariable Integer status) {
-        return Result.ok(chargeInfoService.queryChargeInfoByStatus(status));
+        IPage<ChargeInfo> page = chargeInfoService.getPage(currentPage, pageSize, chargeInfo);
+        // 如果当前页码值大于最大页码值，那么需要执行查询操作，使用最大页码值代替当前页码值
+        if (currentPage > page.getPages()) {
+            page = chargeInfoService.getPage((int) page.getPages(), pageSize, chargeInfo);
+        }
+        return Result.ok(page);
     }
-
-    @PutMapping("/status/update/{chaId}")
-    public Result updateStatus(@PathVariable Integer chaId) {
-        return Result.ok(chargeInfoService.updateStatus(chaId));
-    }
-
 
     @GetMapping("/bill/{roomNum}")
     public Result getChargeByRoomNum(@PathVariable Integer roomNum) {

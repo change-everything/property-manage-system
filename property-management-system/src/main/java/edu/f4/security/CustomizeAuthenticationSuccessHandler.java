@@ -54,7 +54,11 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
         }
 
         empDTO.setToken(jwtToken);
-        empDTO.setRole(emp.getRole().getRoleName());
+
+        if (emp.getRole() != null) {
+            empDTO.setRole(emp.getRole().getRoleName());
+        }
+
         empDTO.setPermCode(permList);
 
         //返回json数据

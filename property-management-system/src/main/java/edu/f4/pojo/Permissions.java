@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 public class Permissions {
     @TableId(type = IdType.AUTO)
     private Integer permId;
+
     //角色权限
     private String permCode;
 

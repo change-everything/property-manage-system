@@ -13,6 +13,7 @@ public class EmpLoginDTO {
 
     private Integer empId;
     private Integer empNum;
+    private String empName;
     private String empPwd;
     private String token;
     private String role;

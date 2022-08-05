@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 
 spring:
@@ -21,8 +21,11 @@ spring:
         max-idle: 10
         min-idle: 1
         time-between-eviction-runs: 10s
+    database: 1
   jackson:
     default-property-inclusion: non_null
+  mvc:
+    dispatch-options-request: true
 
 mybatis-plus:
   type-aliases-package: edu.f4.pojo

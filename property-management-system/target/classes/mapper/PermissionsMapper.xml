@@ -8,7 +8,7 @@
     <select id="selectListByPath" resultType="permissions">
         select *
         from permissions
-        where url like concat('%', #{url}, '%');
+        where url like #{url};
     </select>
 
 

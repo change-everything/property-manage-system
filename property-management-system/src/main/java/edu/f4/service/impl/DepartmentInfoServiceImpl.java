@@ -9,9 +9,11 @@ import edu.f4.pojo.EmployeeInfo;
 import edu.f4.service.IDepartmentInfoService;
 import edu.f4.service.IEmployeeInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
