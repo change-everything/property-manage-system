@@ -4,100 +4,296 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment="2022.6.12裴永鹏上传">
+    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment="初步添加了redis">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cn_hutool_hutool_all_5_7_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_2_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_76.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_4_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_4_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_4_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_4_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_4_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_77_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_77_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_77_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_77_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_77_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_77_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_77_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_77_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava2_rxjava_2_2_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_cache_cache_api_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_63.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_63.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_63.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_marshalling_jboss_marshalling_2_0_10_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_marshalling_jboss_marshalling_river_2_0_10_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_bean_5_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jodd_jodd_core_5_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_redisson_redisson_3_13_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/CronConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/MySecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/config/MySecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/ChargeInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/ChargeInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/EmployeeInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/EmployeeInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/PermissionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/PermissionsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/RoleGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/RoleGroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpAndDeptDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpAndDeptDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpLoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpLoginDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmployeeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/IdListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/IdListDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/DepartmentEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/DepartmentEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/GenderEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/GenderEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/JobEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/JobEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/EmployeeInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/EmployeeInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/RoleGroupMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/RoleGroupMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/ChargeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/ChargeInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/EmployeeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/EmployeeInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/Permissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/RoleGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/RoleGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeLogoutSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeLogoutSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IChargeInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IChargeInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IEmployeeInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IEmployeeInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IPermissionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IPermissionsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IRoleGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IRoleGroupService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/ChargeInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/ChargeInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/DepartmentInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/DepartmentInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/EmployeeInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/EmployeeInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/PermissionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/PermissionsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/RoleGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/RoleGroupServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/utils/UserHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/charge_info.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/department_info.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/emp_conn_role.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/employee_info.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/owner_info.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/permissions.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/role_conn_perm.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/role_group.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PermissionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PermissionsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RoleGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoleGroupMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/f4/TestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/f4/TestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/CronConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/ChargeInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/ChargeInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/EmployeeInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/EmployeeInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/PermissionsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/PermissionsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/RoleGroupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/RoleGroupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpAndDeptDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpAndDeptDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpLoginDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpLoginDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmployeeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmployeeDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/IdListDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/IdListDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/DepartmentEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/DepartmentEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/GenderEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/GenderEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/JobEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/JobEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/EmployeeInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/mapper/EmployeeInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/RoleGroupMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/mapper/RoleGroupMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/ChargeInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/ChargeInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/EmployeeInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/EmployeeInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/Permissions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/Permissions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/RoleGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/RoleGroup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeAuthenticationSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeAuthenticationSuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IChargeInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IChargeInfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IEmployeeInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IEmployeeInfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IPermissionsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IPermissionsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IRoleGroupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IRoleGroupService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/ChargeInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/ChargeInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/DepartmentInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/DepartmentInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/EmployeeInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/EmployeeInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/PermissionsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/PermissionsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/RoleGroupServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/RoleGroupServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EmployeeInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/EmployeeInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PermissionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/PermissionsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/RoleGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/RoleGroupMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/property-management-system-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/property-management-system-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/f4/TestMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/f4/TestMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/PropertyManagementSystemApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/MySecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/MybatisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/config/WebExceptionAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/ChargeInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/DepartmentInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/EmployeeInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/NoPayChargeInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/OwnerInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/PermissionsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/RoleGroupController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/ChargeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/ChargeInfoVo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpAndDeptDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmployeeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/IdListDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/LoginFormDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/NoPayDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/ChargeTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/DepartmentEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/GenderEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/JobEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/enumEntity/ResultCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/ChargeInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/DepartmentInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/EmployeeInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/NoPayChargeInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/OwnerInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/PermissionsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/mapper/RoleGroupMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/ChargeInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/DepartmentInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/EmpConnRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/EmployeeInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/NoPayChargeInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/OwnerInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/Permissions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/RoleConnPerm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/RoleGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/result/JsonResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/result/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/result/ResultTool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/result/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAccessDeniedHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationFailureHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeAuthenticationSuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeLogoutSuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/CustomizeSessionInformationExpiredStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/CustomizeAbstractSecurityInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/CustomizeAccessDecisionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/CustomizeFilterInvocationSecurityMetadataSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/service/IEmployeeDTOService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/service/impl/EmployeeDTOServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IChargeInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IDepartmentInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IEmployeeInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/INoPayChargeInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IOwnerInfoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IPermissionsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IRoleGroupService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/ChargeInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/DepartmentInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/EmployeeInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/NoPayChargeInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/OwnerInfoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/PermissionsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/RoleGroupServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/utils/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/utils/RedisData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/utils/RegexPatterns.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/utils/RegexUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/utils/UrlUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/manager_system.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ChargeInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PermissionsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RoleGroupMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/f4/PropertyManagementSystemApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/f4/TestMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/f4/TestRedis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/f4/testZFPro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/manager_system.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/PropertyManagementSystemApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/MySecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/MybatisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/config/WebExceptionAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/ChargeInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/DepartmentInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/EmployeeInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/NoPayChargeInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/OwnerInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/PermissionsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/RoleGroupController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/ChargeDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/ChargeInfoVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpAndDeptDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpLoginDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmployeeDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/IdListDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/LoginFormDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/NoPayDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/ChargeTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/DepartmentEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/GenderEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/JobEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/enumEntity/ResultCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/ChargeInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/DepartmentInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/EmployeeInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/NoPayChargeInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/OwnerInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/PermissionsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/mapper/RoleGroupMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/ChargeInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/DepartmentInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/EmpConnRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/EmployeeInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/NoPayChargeInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/OwnerInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/Permissions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/RoleConnPerm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/RoleGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/result/JsonResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/result/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/result/ResultTool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/result/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeAccessDeniedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeAuthenticationEntryPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeAuthenticationFailureHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeAuthenticationSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeLogoutSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/CustomizeSessionInformationExpiredStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/filter/CustomizeAbstractSecurityInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/filter/CustomizeAccessDecisionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/filter/CustomizeFilterInvocationSecurityMetadataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/filter/JwtAuthenticationTokenFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/service/IEmployeeDTOService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/service/impl/EmployeeDTOServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IChargeInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IDepartmentInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IEmployeeInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/INoPayChargeInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IOwnerInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IPermissionsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IRoleGroupService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/ChargeInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/DepartmentInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/EmployeeInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/NoPayChargeInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/OwnerInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/PermissionsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/RoleGroupServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/utils/JwtUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/utils/RedisData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/utils/RegexPatterns.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/utils/RegexUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/utils/UrlUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/utils/UserHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ChargeInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EmployeeInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PermissionsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/RoleGroupMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/f4/PropertyManagementSystemApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/f4/TestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/f4/TestRedis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/f4/testZFPro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proprty_ui" beforeDir="false" afterPath="$PROJECT_DIR$/../proprty_ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +320,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven\repository" />
         <option name="mavenHome" value="E:/software/apache-maven-3.8.3" />
         <option name="userSettingsFile" value="E:\software\apache-maven-3.8.3\conf\settings.xml" />
       </MavenGeneralSettings>
@@ -148,12 +345,16 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8 (2)&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/myProject/managementSystem/property-management-system&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;69b71e9240ec596207a3dbefa5a0ff10&quot;
   }
 }</component>
@@ -168,40 +369,26 @@
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\service" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\mapper" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myProject\managementSystem\property-management-system\pmc_admin\src\main\resources" />
+      <recent name="D:\myProject\managementSystem\property-management-system\pmc_admin\src\main\resources\mapper" />
+      <recent name="D:\myProject\managementSystem\property-management-system\pmc_charge\src\main\resources\mapper" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="edu.f4.utils" />
       <recent name="edu.f4.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.PropertyManagementSystemApplication">
-    <configuration name="TestMapper.test03" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MySecurityConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.f4.config.MySecurityConfig" />
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.f4.*" />
+          <option name="PATTERN" value="edu.f4.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.f4" />
-      <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
-      <option name="METHOD_NAME" value="test03" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMapper.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="property-management-system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.f4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.f4" />
-      <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
-      <option name="METHOD_NAME" value="test04" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -254,6 +441,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PmcAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pmc_admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.f4.PmcAdminApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.f4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PropertyManagementSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="property-management-system" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="edu.f4.PropertyManagementSystemApplication" />
@@ -263,11 +463,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.MySecurityConfig" />
+        <item itemvalue="Spring Boot.PmcAdminApplication" />
         <item itemvalue="JUnit.TestRedis.test01" />
         <item itemvalue="JUnit.TestMapper.test06" />
         <item itemvalue="JUnit.TestMapper.test05" />
-        <item itemvalue="JUnit.TestMapper.test04" />
-        <item itemvalue="JUnit.TestMapper.test03" />
       </list>
     </recent_temporary>
   </component>
@@ -301,8 +501,39 @@
       <workItem from="1655366397239" duration="2071000" />
       <workItem from="1655893306993" duration="69000" />
       <workItem from="1655893748923" duration="13000" />
-      <workItem from="1659689218538" duration="1609000" />
+      <workItem from="1659689218538" duration="4379000" />
+      <workItem from="1660025094190" duration="32000" />
+      <workItem from="1661694076713" duration="837000" />
+      <workItem from="1661742065307" duration="64000" />
+      <workItem from="1661742224084" duration="121000" />
+      <workItem from="1661915862968" duration="1101000" />
+      <workItem from="1662191543867" duration="294000" />
+      <workItem from="1662191968688" duration="2753000" />
+      <workItem from="1662212264635" duration="2712000" />
+      <workItem from="1662303521010" duration="2640000" />
+      <workItem from="1662471144582" duration="6847000" />
+      <workItem from="1662535483939" duration="633000" />
+      <workItem from="1662560512534" duration="3790000" />
+      <workItem from="1664116029021" duration="5912000" />
+      <workItem from="1664202528523" duration="4407000" />
+      <workItem from="1664377239658" duration="2602000" />
+      <workItem from="1664448765453" duration="1264000" />
     </task>
+    <task id="LOCAL-00001" summary="初步添加了redis">
+      <created>1659690886575</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659690886575</updated>
+    </task>
+    <task id="LOCAL-00002" summary="初步添加了redis">
+      <created>1659690965917</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659690965917</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,5 +554,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="初步添加了redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步添加了redis" />
   </component>
 </project>

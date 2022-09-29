@@ -11,6 +11,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="pmc_admin" target="1.8" />
+      <module name="pmc_charge" target="1.8" />
+      <module name="pmc_common" target="1.8" />
+      <module name="pmc_dept" target="1.8" />
+      <module name="pmc_owner" target="1.8" />
       <module name="property-management-system" target="1.8" />
     </bytecodeTargetLevel>
   </component>
