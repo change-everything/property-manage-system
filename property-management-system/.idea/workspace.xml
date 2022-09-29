@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment=":fix: 修复了数据显示错误">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/EmployeeInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/EmployeeInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/DeptAndEmpVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/DeptAndEmpVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpAndDeptDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/dto/EmpAndDeptDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IDepartmentInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IDepartmentInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IEmployeeInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IEmployeeInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/DepartmentInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/DepartmentInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/EmployeeInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/EmployeeInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/PermissionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/PermissionsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/EmployeeInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/EmployeeInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/DeptAndEmpVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/DeptAndEmpVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpAndDeptDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/dto/EmpAndDeptDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IEmployeeInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IEmployeeInfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/DepartmentInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/DepartmentInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/EmployeeInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/EmployeeInfoServiceImpl.class" afterDir="false" />
+    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment=":add: 添加了系统参数模块">
       <change beforePath="$PROJECT_DIR$/../proprty_ui" beforeDir="false" afterPath="$PROJECT_DIR$/../proprty_ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +226,7 @@
       <workItem from="1664116029021" duration="5912000" />
       <workItem from="1664202528523" duration="4407000" />
       <workItem from="1664377239658" duration="2602000" />
-      <workItem from="1664448765453" duration="10511000" />
+      <workItem from="1664448765453" duration="10604000" />
     </task>
     <task id="LOCAL-00001" summary="初步添加了redis">
       <created>1659690886575</created>
@@ -271,7 +256,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664450722681</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=":add: 添加了系统参数模块">
+      <created>1664459572524</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664459572524</updated>
+    </task>
+    <task id="LOCAL-00006" summary=":add: 添加了系统参数模块">
+      <created>1664459580645</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664459580645</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +293,7 @@
     </ignored-roots>
     <MESSAGE value="初步添加了redis" />
     <MESSAGE value=":fix: 修复了数据显示错误" />
-    <option name="LAST_COMMIT_MESSAGE" value=":fix: 修复了数据显示错误" />
+    <MESSAGE value=":add: 添加了系统参数模块" />
+    <option name="LAST_COMMIT_MESSAGE" value=":add: 添加了系统参数模块" />
   </component>
 </project>
