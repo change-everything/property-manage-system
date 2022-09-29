@@ -9,6 +9,7 @@ import edu.f4.pojo.EmployeeInfo;
 import edu.f4.service.IEmployeeInfoService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -83,5 +84,10 @@ public class EmployeeInfoController {
         }
         return Result.ok(page);
     }
+
+    //public static void main(String[] args) {
+    //    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    //    System.out.println(encoder.encode("root"));
+    //}
 
 }

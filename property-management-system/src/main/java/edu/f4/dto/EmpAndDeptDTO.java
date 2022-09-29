@@ -24,6 +24,8 @@ public class EmpAndDeptDTO {
     private String address;
     // 员工部门号
     private String empDepName;
+    // 部门id
+    private Integer empDepNum;
     // 员工id
     private Integer roleId;
     // 员工角色
@@ -31,6 +33,6 @@ public class EmpAndDeptDTO {
     // 员工电话
     private String phone;
     // 员工密码
-    private String empPwd;
+    //private String empPwd;
 
 }

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class PermissionsServiceImpl extends ServiceImpl<PermissionsMapper, Permissions>implements IPermissionsService {
+public class PermissionsServiceImpl extends ServiceImpl<PermissionsMapper, Permissions> implements IPermissionsService {
 
 
     // 将数据转换为树结构

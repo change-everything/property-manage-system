@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.toolkit.Constants;
 import com.baomidou.mybatisplus.extension.service.IService;
 import edu.f4.dto.EmpAndDeptDTO;
 import edu.f4.dto.LoginFormDTO;
+import edu.f4.pojo.RoleGroup;
 import edu.f4.result.Result;
 import edu.f4.pojo.EmployeeInfo;
 import org.apache.ibatis.annotations.Param;
@@ -24,6 +25,7 @@ public interface IEmployeeInfoService extends IService<EmployeeInfo> {
 
     boolean updateEmployee(EmployeeInfo employeeInfo, Integer roleId);
 
+    RoleGroup getEmpRole(Integer empId);
 
     List<EmployeeInfo> findEmpByDeptNum(Integer deptNum);
 }

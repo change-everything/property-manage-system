@@ -21,5 +21,5 @@ public class DeptAndEmpVo {
     //部门电话
     private String depTelNum;
 
-    private List<EmployeeInfo> emp;
+    private List<EmpAndDeptDTO> emp;
 }

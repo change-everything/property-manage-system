@@ -77,6 +77,8 @@ public class EmployeeInfoServiceImpl extends ServiceImpl<EmployeeInfoMapper, Emp
         return page1;
     }
 
+
+
     @Override
     public EmpAndDeptDTO getEmpAndDept(Integer empId) {
 
@@ -84,6 +86,9 @@ public class EmployeeInfoServiceImpl extends ServiceImpl<EmployeeInfoMapper, Emp
         EmployeeInfo empRole = employeeInfoMapper.getEmpRole(info.getEmpId());
         EmpAndDeptDTO empAndDeptDTO = BeanUtil.copyProperties(info, EmpAndDeptDTO.class);
 
+        if (empAndDeptDTO.getEmpDepNum() != null) {
+            empAndDeptDTO.setEmpDepName(DepartmentEnum.getMessageByCode(info.getEmpDepNum().toString()));
+        }
         RoleGroup role = empRole.getRole();
         if (role != null) {
             empAndDeptDTO.setRoleId(role.getRoleId());
@@ -112,6 +117,11 @@ public class EmployeeInfoServiceImpl extends ServiceImpl<EmployeeInfoMapper, Emp
         updateById(employeeInfo);
 
         return employeeInfoMapper.updateEmpRole(employeeInfo.getEmpId(), roleId);
+    }
+
+    @Override
+    public RoleGroup getEmpRole(Integer empId) {
+        return employeeInfoMapper.getEmpRole(empId).getRole();
     }
 
     @Override

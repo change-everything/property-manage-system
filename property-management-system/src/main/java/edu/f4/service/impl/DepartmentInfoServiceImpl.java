@@ -9,6 +9,7 @@ import edu.f4.dto.EmpAndDeptDTO;
 import edu.f4.mapper.DepartmentInfoMapper;
 import edu.f4.pojo.DepartmentInfo;
 import edu.f4.pojo.EmployeeInfo;
+import edu.f4.pojo.RoleGroup;
 import edu.f4.service.IDepartmentInfoService;
 import edu.f4.service.IEmployeeInfoService;
 import org.springframework.beans.BeanUtils;
@@ -61,14 +62,21 @@ public class DepartmentInfoServiceImpl extends ServiceImpl<DepartmentInfoMapper,
     public List<DeptAndEmpVo> findEmpByDeptNum() {
 
         List<DepartmentInfo> departmentInfos = list();
-        //List<EmpAndDeptDTO> empList = new ArrayList<>();
         List<DeptAndEmpVo> deptList = new ArrayList<>();
+
 
         for (DepartmentInfo departmentInfo : departmentInfos) {
             DeptAndEmpVo deptAndEmpVo = BeanUtil.copyProperties(departmentInfo, DeptAndEmpVo.class);
             List<EmployeeInfo> empByDeptNum = employeeInfoService.findEmpByDeptNum(deptAndEmpVo.getDepNum());
+            List<EmpAndDeptDTO> empList = new ArrayList<>();
+            for (EmployeeInfo employeeInfo : empByDeptNum) {
+                EmpAndDeptDTO empAndDeptDTO = BeanUtil.copyProperties(employeeInfo, EmpAndDeptDTO.class);
+                RoleGroup empRole = employeeInfoService.getEmpRole(empAndDeptDTO.getEmpId());
+                empAndDeptDTO.setRoleDest(empRole.getRoleDest());
+                empList.add(empAndDeptDTO);
+            }
 
-            deptAndEmpVo.setEmp(empByDeptNum);
+            deptAndEmpVo.setEmp(empList);
             deptList.add(deptAndEmpVo);
         }
 
