@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # manager_system
+    url: jdbc:mysql://localhost:3306/manager_system?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  redis:
+    host: 192.168.216.133
+    port: 6379
+    password: 123321
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+    database: 1
+  jackson:
+    default-property-inclusion: non_null
+  mvc:
+    dispatch-options-request: true
+
+mybatis-plus:
+  type-aliases-package: edu.f4.pojo
+#  type-enums-package:
+
+logging:
+   level:
+     edu.f4: debug
+

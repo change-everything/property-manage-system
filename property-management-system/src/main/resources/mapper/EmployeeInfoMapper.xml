@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.f4.mapper.EmployeeInfoMapper">
+
+    <sql id="empAndRoleAndPermsSql">
+        ei.emp_id, emp_num, emp_pwd, emp_name, rg.role_id, role_name, role_dest, per.perm_id, perm_code, perm_name, url
+    </sql>
+
+    <resultMap id="empNumAndRoleAndPerms" type="employeeInfo">
+        <id property="empId" column="emp_id"/>
+        <result property="empNum" column="emp_num"/>
+        <result property="empPwd" column="emp_pwd"/>
+        <result property="empName" column="emp_name"/>
+        <association property="role" javaType="roleGroup">
+            <id property="roleId" column="role_id"/>
+            <result property="roleName" column="role_name"/>
+            <result property="roleDest" column="role_dest"/>
+        </association>
+        <collection property="perms" javaType="list" ofType="permissions">
+            <id property="permId" column="perm_id"/>
+            <result property="permCode" column="perm_code"/>
+            <result property="permName" column="perm_name"/>
+            <result property="url" column="url"/>
+        </collection>
+    </resultMap>
+
+
+    <resultMap id="empAndDept" type="employeeInfo">
+        <id property="empId" column="emp_id"/>
+        <result property="empNum" column="emp_num"/>
+        <result property="address" column="address"/>
+        <result property="empName" column="emp_name"/>
+        <result property="birthDate" column="birth_date"/>
+        <result property="gender" column="gender"/>
+        <result property="phone" column="phone"/>
+        <result property="empPwd" column="emp_pwd"/>
+        <association property="departmentInfo" javaType="departmentInfo">
+            <id property="depId" column="dep_id"/>
+            <result property="depNum" column="dep_num"/>
+            <result property="depName" column="dep_name"/>
+            <result property="depHead" column="dep_head"/>
+            <result property="depTelNum" column="dep_tel_num"/>
+        </association>
+    </resultMap>
+
+
+    <resultMap id="empRole" type="employeeInfo">
+        <id property="empId" column="emp_id"/>
+        <association property="role" javaType="roleGroup">
+            <id property="roleId" column="role_id"/>
+            <result property="roleDest" column="role_dest"/>
+        </association>
+    </resultMap>
+
+    <select id="getEmpAndRoleAndPermsByEmpNum" resultMap="empNumAndRoleAndPerms">
+        select <include refid="empAndRoleAndPermsSql"/> from employee_info as ei
+                left join emp_conn_role as ecr on ei.emp_id = ecr.emp_id
+                left join role_group as rg on rg.role_id = ecr.role_id
+                left join role_conn_perm as rcp on rg.role_id = rcp.role_id
+                left join permissions as per on rcp.perm_id = per.perm_id
+                where emp_num = #{empNum}
+    </select>
+
+    <select id="queryByEmpNum" resultType="employeeInfo">
+        select * from employee_info where emp_num = #{empNum}
+    </select>
+
+
+    <select id="queryEmpAndDeptLike" resultMap="empAndDept">
+        select * from employee_info as ei left join department_info as di
+                    on ei.emp_dept_num = di.dept_num
+                <where>
+                    <if test="empNum != null">
+                        emp_num = #{empNum}
+                    </if>
+
+                    <if test="phone != null">
+                        phone = #{phone}
+                    </if>
+
+                    <if test="empDepNum != null">
+                        emp_dep_num = #{empDepNum}
+                    </if>
+
+                </where>
+    </select>
+
+
+
+    <select id="getEmpAndDept" resultMap="empAndDept">
+        select * from employee_info as ei left join department_info as di
+                                                    on ei.emp_dep_num = di.dep_num
+                                                    where ei.emp_id = #{empId}
+    </select>
+
+    <select id="getEmpRole" resultMap="empRole">
+        select ei.emp_id, rg.role_id, rg.role_dest from employee_info as ei
+                        left join emp_conn_role as ecr on ei.emp_id = ecr.emp_id
+                        left join role_group as rg on ecr.role_id = rg.role_id
+                        where ei.emp_id = #{empId}
+    </select>
+
+
+    <insert id="insertEmpConnRole" parameterType="empConnRole">
+        insert into emp_conn_role values (null, #{empId}, #{roleId})
+    </insert>
+
+    <update id="updateEmpRole" parameterType="empConnRole">
+        update emp_conn_role set role_id = #{roleId} where emp_id = #{empId}
+    </update>
+
+
+</mapper>
