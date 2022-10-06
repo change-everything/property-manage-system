@@ -5,6 +5,7 @@
 <template>
     <div>
         <div class="form_board">
+            <loginFace />
             <div style="width:360px;float:right;margin-right:80px;margin-top:110px;">
                 <el-form
                     label-width="70px"
@@ -71,9 +72,10 @@
 <script>
 import {ElForm,ElFormItem,ElInput,ElButton,ElNotification} from 'element-plus'
 import publicApi from '@/api/publicApi.js'
+import loginFace from '@/components/login/loginFace.vue'
 export default {
     components:{
-        ElForm,ElFormItem,ElInput,ElButton
+        ElForm,ElFormItem,ElInput,ElButton,loginFace
     },
     data(){
         return {

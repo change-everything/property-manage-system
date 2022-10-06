@@ -152,7 +152,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   //放行登录路由
   // console.log(to);
-  if(to.path == '/login'){
+  if(to.path == '/login' || to.path == '/test'){
     next()
   }else{
     if(store.state.users.isLogin){

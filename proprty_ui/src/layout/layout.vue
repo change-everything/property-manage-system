@@ -8,10 +8,10 @@
             <el-header style="background:#000000; height:8%;"><Header /></el-header>
             <el-container>
                 <el-aside width="13vw"><Aside /></el-aside>
-                <el-main >
+                <el-main style="background-color: whitesmoke;">
                     <breadcrumb />
-                    <el-divider />
-                    <router-view/>
+                    <el-divider/>
+                    <router-view />
                 </el-main>
             </el-container>
         </el-container>

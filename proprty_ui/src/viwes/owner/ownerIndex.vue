@@ -3,7 +3,7 @@
  @date: 2022-06-08
  -->
 <template>
-    <div>
+    <el-card style="border-radius: 20px;">
         <el-form :inline="true" :data="formSearch" ref="formSearch">
             <el-form-item label="业主编号" prop="ownerNum">
                 <el-input v-model="formSearch.ownerNum" style="width:220px;" placeholder="请输入业主编号" />
@@ -30,7 +30,7 @@
 
         <ownerup ref="ownerInfoUp" />
 
-        <el-table :data="tableData" height="600" style="width: 100%" v-loading="loading">
+        <el-table :data="tableData" height="550" style="width: 100%" v-loading="loading">
             <el-table-column type="index" :index="currentIndex"  label="序号" width="80" align='center' />
             <el-table-column prop="ownerNum" label="业主编号" width="180"  align='center'/>
             <el-table-column prop="ownerName" label="姓名" width="180" align='center' />
@@ -52,13 +52,14 @@
         </el-table>
 
 
-        <el-pagination 
+        <el-pagination style="margin-top:10px"
         background 
         layout="total,prev, pager, next,jumper" 
         :total="total" 
         :current-page="currentPage"
         @current-change="pageChange" />
-    </div>
+        </el-card>
+    <!-- </div> -->
 </template>
 
 <script>

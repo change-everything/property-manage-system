@@ -1,6 +1,6 @@
 <template>
 <div>
-	<el-button @click="showDialog">对话框</el-button>
+	<el-button @click="showDialog">人脸登录</el-button>
 	<el-dialog v-model="dialogVisable" width="30vw" title="人脸登录"  @close="beforColse">
 		<div class="space">
 			<video
@@ -29,7 +29,10 @@
 </div>
 </template>
 <script>
+import publicApi from '@/api/publicApi.js'
+import {ElNotification} from 'element-plus'
 export default {
+    name:'loginFace',
   data() {
     return {
       videoWidth: 350,
@@ -39,7 +42,6 @@ export default {
     thisContext: null,
 		thisVideo: null,
 		openVideo: false,
-		timer:'',
 		dialogVisable:false
     };
   },
@@ -52,12 +54,8 @@ export default {
 		setTimeout(() => {
 			this.getCompetence()//进入页面就调用摄像头
 			//自动抓拍
-			this.timer = setInterval(this.setImage,500)
+			this.timer = setInterval(this.setImage,2000)
 		}, 1000);
-	},
-
-	beforColse(){
-		this.stopNavigator();
 	},
 
     // 调用权限（打开摄像头功能）
@@ -124,6 +122,49 @@ export default {
     //   alert("打开摄像头");
     },
  
+ loginFace(img){
+    publicApi.loginFace(img).then((res)=>{
+        res =res.data;
+        if(res.success == true){
+            // console.log(res)
+            this.stopNavigator();
+            clearInterval(this.timer);
+            let data = {
+                userInfo:{
+                userId:res.data.empId,
+                userName:res.data.empName,
+                userNum:res.data.empNum,
+                role:res.data.role
+                },
+                permCode:res.data.permCode
+            }
+                            
+            //用vuex存储用户信息,token信息,menu信息
+            this.$store.dispatch('users/LoginSuccess',data)
+            this.$store.dispatch('users/SaveToken',res.data.token)
+            //用session存储token                                    
+            sessionStorage.setItem('setToken',JSON.stringify(res.data.token))
+
+            ElNotification({
+                message: '登录成功',
+                type: 'success',
+                duration:'1000',
+                showClose:false
+            })
+
+            this.$router.push('/')
+        }else{
+            if(res.statusCode === 2003 || res.statusCode === 2007){
+                ElNotification({
+                message:'账号不存在',
+                type: 'error',
+                duration:'1500',
+                showClose:false
+                })
+            }
+        }
+    })
+  },
 
     //  绘制图片（拍照功能）
     setImage() {
@@ -139,8 +180,9 @@ export default {
       // 获取图片base64链接
       var image = this.thisCancas.toDataURL("image/png");
       _this.imgSrc = image; //赋值并预览图片
+      this.loginFace(image);
 
-	console.log(_this.imgSrc);
+	// console.log(_this.imgSrc);
     //   alert("拍照");
     },
 
@@ -150,10 +192,11 @@ export default {
     //   alert("关闭摄像头");
     },
   },
-//   beforeDestroy(){
-// 	  clearInterval(this.timer);
-//   }
-};
+
+  beforeUnmount(){
+      clearInterval(this.timer);
+  }
+}
 </script>
 
 <style scoped>

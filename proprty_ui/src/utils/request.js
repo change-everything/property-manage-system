@@ -19,7 +19,7 @@ const request = axios.create({
 
 //请求封装 ———— 添加token
 request.interceptors.request.use(config => {
-	config.headers['Authorization'] = store.state.users.token;
+	config.headers['UserToken'] = store.state.users.token;
 	return config
 })
 

@@ -3,12 +3,20 @@
  * @date: 2022-06-16
 */
 import request from '@/utils/request.js'
+import axios from 'axios'
+import utils from '@/utils/tools.js'
 
 // const URL_login = 'http://127.0.0.1/8080';
 
 export default{
     login(data){
-        return request.post('/login?username='+data.username+'&password='+data.password,data);
+        return request.post('/user/login',data);
+    },
+
+    loginFace(img){
+        const formData = new FormData();
+        formData.append('file', utils.dataURItoBlob(img));
+        return axios.post('/user/faceLogin',formData)
     },
 
 

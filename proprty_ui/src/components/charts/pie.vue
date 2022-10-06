@@ -3,7 +3,7 @@
  @date: 2022-06-16
  -->
 <template>
-    <div id="car" style="width:100%;height:300px"></div>
+    <div id="car" style="width:100%;height:200px"></div>
 </template>
 
 <script>
