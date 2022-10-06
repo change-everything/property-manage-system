@@ -1,0 +1,37 @@
+{
+  "id": "3685534",
+  "name": "物业管理",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "339472",
+      "name": "维修",
+      "font_class": "weixiu1",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "6941232",
+      "name": "竖线",
+      "font_class": "shuxian",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "11584983",
+      "name": "费用",
+      "font_class": "feiyong1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4739147",
+      "name": "租赁资源",
+      "font_class": "zulinziyuan",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    }
+  ]
+}
