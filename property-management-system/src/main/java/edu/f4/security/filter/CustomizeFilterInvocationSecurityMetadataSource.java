@@ -32,15 +32,10 @@ public class CustomizeFilterInvocationSecurityMetadataSource implements FilterIn
 
         // 获取请求地址
         String requestUrl = ((FilterInvocation) o).getRequestUrl();
-
         System.out.println(requestUrl);
-
         String requestMethod = UrlUtils.subUrl(o.toString());
-
         requestUrl = UrlUtils.splitUrl(requestUrl);
-
         String url = requestMethod + requestUrl;
-
         System.out.println(url);
 
         // 查询具体某个接口的权限

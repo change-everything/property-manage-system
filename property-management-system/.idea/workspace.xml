@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment=":add: 添加了系统参数模块">
-      <change beforePath="$PROJECT_DIR$/../proprty_ui" beforeDir="false" afterPath="$PROJECT_DIR$/../proprty_ui" afterDir="false" />
-    </list>
+    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment=":add: 基于百度云ai的扫脸登录" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +16,8 @@
         <option value="mybatis-config" />
         <option value="mybatis-mapper" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,7 +56,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/myProject/managementSystem/property-management-system&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/soft/ruoyi/temp/registration-system&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -75,8 +73,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\myProject\managementSystem\property-management-system\src\main\java\edu\f4" />
       <recent name="D:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\utils" />
+      <recent name="D:\myProject\managementSystem\property-management-system\src\main\java\edu\f4" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\service\impl" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\service" />
       <recent name="F:\myProject\managementSystem\property-management-system\src\main\java\edu\f4\mapper" />
@@ -118,18 +116,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMapper.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PasswordEncoder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.f4.utils.PasswordEncoder" />
       <module name="property-management-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.f4.*" />
+          <option name="PATTERN" value="edu.f4.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.f4" />
-      <option name="MAIN_CLASS_NAME" value="edu.f4.TestMapper" />
-      <option name="METHOD_NAME" value="test06" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,13 +165,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="lua.app" factoryName="Lua Application">
+      <option name="program" value="lua.exe" />
+      <option name="file" value="" />
+      <option name="workingDir" value="$PROJECT_DIR$/src/test/java" />
+      <option name="debuggerType" value="1" />
+      <option name="params" value="" />
+      <option name="charset" value="UTF-8" />
+      <option name="showConsole" value="true" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.EmployeeInfoController" />
         <item itemvalue="应用程序.MySecurityConfig" />
+        <item itemvalue="应用程序.PasswordEncoder" />
+        <item itemvalue="应用程序.EmployeeInfoController" />
         <item itemvalue="Spring Boot.PmcAdminApplication" />
         <item itemvalue="JUnit.TestRedis.test01" />
-        <item itemvalue="JUnit.TestMapper.test06" />
       </list>
     </recent_temporary>
   </component>
@@ -227,6 +232,16 @@
       <workItem from="1664202528523" duration="4407000" />
       <workItem from="1664377239658" duration="2602000" />
       <workItem from="1664448765453" duration="10604000" />
+      <workItem from="1664461752402" duration="52000" />
+      <workItem from="1664725317288" duration="649000" />
+      <workItem from="1664762590560" duration="570000" />
+      <workItem from="1664806236693" duration="7001000" />
+      <workItem from="1664843995764" duration="7552000" />
+      <workItem from="1664880487004" duration="15392000" />
+      <workItem from="1664932399083" duration="15038000" />
+      <workItem from="1664957650943" duration="3172000" />
+      <workItem from="1664964287572" duration="1571000" />
+      <workItem from="1664966346763" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="初步添加了redis">
       <created>1659690886575</created>
@@ -270,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664459580645</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=":add: 基于百度云ai的扫脸登录">
+      <created>1664965307202</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664965307202</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +316,8 @@
     <MESSAGE value="初步添加了redis" />
     <MESSAGE value=":fix: 修复了数据显示错误" />
     <MESSAGE value=":add: 添加了系统参数模块" />
-    <option name="LAST_COMMIT_MESSAGE" value=":add: 添加了系统参数模块" />
+    <MESSAGE value=":delete: 删除了旧版ui" />
+    <MESSAGE value=":add: 基于百度云ai的扫脸登录" />
+    <option name="LAST_COMMIT_MESSAGE" value=":add: 基于百度云ai的扫脸登录" />
   </component>
 </project>

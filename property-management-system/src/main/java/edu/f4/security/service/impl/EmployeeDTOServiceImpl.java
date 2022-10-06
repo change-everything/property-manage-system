@@ -13,6 +13,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -30,7 +31,7 @@ public class EmployeeDTOServiceImpl implements IEmployeeDTOService {
     @Autowired
     private EmployeeInfoMapper employeeInfoMapper;
     @Autowired
-    private RoleGroupMapper roleGroupMapper;
+    private PasswordEncoder passwordEncoder;
 
 
     @Override
@@ -38,8 +39,6 @@ public class EmployeeDTOServiceImpl implements IEmployeeDTOService {
 
 
         EmployeeInfo emp = employeeInfoMapper.getEmpAndRoleAndPermsByEmpNum(Integer.parseInt(username));
-
-        //EmployeeInfo emp = employeeInfoMapper.queryByEmpNum(Integer.parseInt(username));
 
         if (StringUtils.isEmpty(emp)) {
             throw new UsernameNotFoundException("找不到此用户");
@@ -59,7 +58,7 @@ public class EmployeeDTOServiceImpl implements IEmployeeDTOService {
         });
 
 
-        return new User(empDTO.getUsername(), empDTO.getPassword(), true, true, true, true, grantedAuthorities);
+        return new User(empDTO.getUsername(), passwordEncoder.encode(empDTO.getPassword()), true, true, true, true, grantedAuthorities);
 
     }
 }

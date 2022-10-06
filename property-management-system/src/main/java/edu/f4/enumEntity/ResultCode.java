@@ -32,6 +32,9 @@ public enum ResultCode {
 
     /* 业务错误 */
     NO_PERMISSION(3001, "当前账号没有此权限");
+
+
+
     private Integer code;
     private String message;
 

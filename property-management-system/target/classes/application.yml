@@ -4,6 +4,7 @@ server:
 
 spring:
   main:
+    allow-circular-references: true
     allow-bean-definition-overriding: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,16 +13,16 @@ spring:
     username: root
     password: 123456
   redis:
-    host: 192.168.216.133
+    host: 127.0.0.1
     port: 6379
-    password: 123321
+    password:
     lettuce:
       pool:
         max-active: 10
         max-idle: 10
         min-idle: 1
         time-between-eviction-runs: 10s
-    database: 1
+    database: 5
   jackson:
     default-property-inclusion: non_null
   mvc:
@@ -35,3 +36,12 @@ logging:
    level:
      edu.f4: debug
 
+ai:
+  appId: 27752402
+  apiKey: z7otDrIMALONLdbtlpp2xO3i
+  secretKey: 1fq1WAeENGAkdG197apl6bEw3DQrzaaC
+  imageType: BASE64
+  groupId: user_face
+
+face:
+  url: http://localhost:8080/#/facelogin

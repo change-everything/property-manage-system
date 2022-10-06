@@ -36,11 +36,10 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+
         User userDetails = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         EmployeeInfo employeeInfo = mapper.selectOne(new QueryWrapper<EmployeeInfo>().eq("emp_num", userDetails.getUsername()));
-
         EmployeeInfo emp = mapper.getEmpAndRoleAndPermsByEmpNum(employeeInfo.getEmpNum());
-
         EmpLoginDTO empDTO = BeanUtil.copyProperties(emp, EmpLoginDTO.class);
 
         // 根据用户的id和account生成token并返回

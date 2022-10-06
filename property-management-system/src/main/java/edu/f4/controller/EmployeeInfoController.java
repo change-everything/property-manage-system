@@ -2,6 +2,7 @@ package edu.f4.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import edu.f4.dto.EmpAndDeptDTO;
+import edu.f4.dto.EmpLoginDTO;
 import edu.f4.enumEntity.GenderEnum;
 import edu.f4.enumEntity.JobEnum;
 import edu.f4.result.Result;
@@ -9,11 +10,13 @@ import edu.f4.pojo.EmployeeInfo;
 import edu.f4.service.IEmployeeInfoService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -84,6 +87,7 @@ public class EmployeeInfoController {
         }
         return Result.ok(page);
     }
+
 
     //public static void main(String[] args) {
     //    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();

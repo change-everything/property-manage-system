@@ -3,16 +3,15 @@ package edu.f4.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.f4.result.Result;
 import edu.f4.security.CustomizeAccessDeniedHandler;
-import edu.f4.security.filter.CustomizeAbstractSecurityInterceptor;
-import edu.f4.security.filter.CustomizeAccessDecisionManager;
-import edu.f4.security.filter.CustomizeFilterInvocationSecurityMetadataSource;
-import edu.f4.security.filter.JwtAuthenticationTokenFilter;
+import edu.f4.security.filter.*;
 import edu.f4.security.service.IEmployeeDTOService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -33,6 +32,7 @@ import org.springframework.security.web.session.SessionInformationExpiredStrateg
  */
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 
 
@@ -65,8 +65,11 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
+
     @Autowired
     private IEmployeeDTOService employeeDTOService;
+
+
 
     // 授权
     @Override
@@ -86,26 +89,17 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 });
 
         http.authorizeRequests()
+                .antMatchers("/user/**").anonymous()
                 .and()
                 .exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint)
                 .accessDeniedHandler(customizeAccessDeniedHandler)
-                .and()
-                .formLogin().loginPage("/login").successForwardUrl("/")// 登录
-                .permitAll()  //允许所有用户
-                .successHandler(authenticationSuccessHandler)  //登录成功处理逻辑
-                .failureHandler(authenticationFailureHandler)  //登录失败处理逻辑
                 .and().rememberMe().tokenValiditySeconds(60)
-                .and()
-                .logout()      // 退出
-                .permitAll()   //允许所有用户
-                .logoutSuccessHandler(logoutSuccessHandler)  //退出成功处理逻辑
-                .deleteCookies("JSESSIONID")   //登出之后删除cookie
                 .and()
                 .sessionManagement()    //会话管理
                 .maximumSessions(2)     //同一账号同时登录最大用户数
                 .expiredSessionStrategy(sessionInformationExpiredStrategy);
-
+        http.logout().permitAll().logoutSuccessHandler(logoutSuccessHandler).deleteCookies("JSESSIONID");
         http.addFilterBefore(customizeAbstractSecurityInterceptor, FilterSecurityInterceptor.class);
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
         http.headers().cacheControl();
@@ -125,8 +119,18 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception
+    {
+        return super.authenticationManagerBean();
+    }
+
+
     //public static void main(String[] args) {
-    //    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    //
+    //    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    //
     //    String root = passwordEncoder.encode("root");
     //
     //    System.out.println(root);
