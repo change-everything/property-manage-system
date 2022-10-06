@@ -4,32 +4,40 @@
  -->
 <template>
     <div>
+        <div class="img_card">
+            <img src="../images/login_img.png" style="width:85%;height:85%">
+        </div>
         <div class="form_board">
-            <loginFace />
-            <div style="width:360px;float:right;margin-right:80px;margin-top:110px;">
+            <div style="width:360px;float:right;margin-right:80px;margin-top:80px;">
                 <el-form
-                    label-width="70px"
-                    label-position="left"
                     :model="loginForm"
                     :rules="rules"
                     ref="loginForm"
-                    style="max-width: 380px;">
+                    style="max-width: 400px;">
 
-                    <el-form-item label="用户名" prop="username" style="color:black;">
-                        <el-input  v-model="loginForm.username" placeholder="请输入用户名" />
+                    <el-form-item prop="username" style="color:black;">
+                        <el-input style="height:50px" :prefix-icon="UserFilled"  v-model="loginForm.username" size="large" placeholder="请输入用户名" >
+                            <template #prefix><el-icon size="30px"><User /></el-icon></template>
+                        </el-input>
                     </el-form-item>
-                    <el-form-item label="密码" prop="password">
-                        <el-input v-model="loginForm.password" @focus="pwdHasFocus" @blur="pwdLoseFocus" :show-password="true" type="password" placeholder="请输入密码" />
+                    <el-form-item  prop="password">
+                        <el-input style="height:50px" v-model="loginForm.password" size="large" @focus="pwdHasFocus" @blur="pwdLoseFocus" :show-password="true" type="password" placeholder="请输入密码" >\
+                            <template #prefix><el-icon size="30px"><Lock /></el-icon></template>
+                        </el-input>
                     </el-form-item>
-                    <el-row>
+                    <!-- <el-row>
                         <el-col :offset="18">
                             <input type="checkbox" name="remember-me" title="记住我" />自动登录<br/>
-                            <!-- <el-checkbox :true-label="true" :false-label="false" v-model="rememberMe">记住密码</el-checkbox> -->
+                            </el-col>
+                    </el-row> -->
+                    <el-row style="margin-top:15px">
+                        <el-col >
+                            <el-button style="width:360px;height:50px" type="primary" size="large" @click="login">登录</el-button>
                         </el-col>
                     </el-row>
-                    <el-row>
-                        <el-col :offset="12">
-                            <el-button type="primary" size="large" @click="login">登录</el-button>
+                     <el-row style="margin-top:10px">
+                        <el-col >
+                            <loginFace />
                         </el-col>
                     </el-row>
                 </el-form>
@@ -46,23 +54,23 @@
         </div> -->
 
         <div class="cloud_bg">
-            <img src="../images/groud2.png" style="position:absolute;left: 0;
+            <img src="../images/backgroud.png" style="position:absolute;left: 0;
             top: 0;height: 100%;width: 100%;z-index:-10000"/>
         </div>
 
-        <div>
+        <!-- <div> -->
             <!-- 动画猫头鹰 -->
-            <img src="../images/maotou.png" style="position:absolute;z-index:-502;top:180px;left:570px">
+            <!-- <img src="../images/maotou.png" style="position:absolute;z-index:-502;top:180px;left:570px"> -->
 
             <!-- 圆手 -->
-            <img src="../images/hand.png" v-show="isNotPwd" style="position:absolute;z-index:-502;top:250px;left:530px">
-            <img src="../images/hand.png" v-show="isNotPwd" style="position:absolute;z-index:-502;top:250px;left:680px">
+            <!-- <img src="../images/hand.png" v-show="isNotPwd" style="position:absolute;z-index:-502;top:250px;left:530px">
+            <img src="../images/hand.png" v-show="isNotPwd" style="position:absolute;z-index:-502;top:250px;left:680px"> -->
 
             <!-- 手掌 -->
-            <img src="../images/hand_two.png" v-show="isPwd" style="position:absolute;z-index:-502;top:230px;left:580px;transform: rotateY(180deg)">
-            <img src="../images/hand_two.png" v-show="isPwd"  style="position:absolute;z-index:-502;top:230px;left:625px;transform: rotateZ(-10deg)">
+            <!-- <img src="../images/hand_two.png" v-show="isPwd" style="position:absolute;z-index:-502;top:230px;left:580px;transform: rotateY(180deg)">
+            <img src="../images/hand_two.png" v-show="isPwd"  style="position:absolute;z-index:-502;top:230px;left:625px;transform: rotateZ(-10deg)"> -->
 
-        </div>
+        <!-- </div> -->
 
 
         
@@ -73,15 +81,16 @@
 import {ElForm,ElFormItem,ElInput,ElButton,ElNotification} from 'element-plus'
 import publicApi from '@/api/publicApi.js'
 import loginFace from '@/components/login/loginFace.vue'
+import {User,Lock} from '@element-plus/icons-vue'
 export default {
     components:{
-        ElForm,ElFormItem,ElInput,ElButton,loginFace
+        ElForm,ElFormItem,ElInput,ElButton,loginFace,User,Lock
     },
     data(){
         return {
             background: {
                 // 背景图片地址
-                backgroundImage: 'url(' + require('../images/download_userLogin.png') + ')',
+                // backgroundImage: 'url(' + require('../images/backgroud.png') + ')',
                 // 背景图片是否重复
                 backgroundRepeat: 'no-repeat',
             },
@@ -166,13 +175,13 @@ export default {
     height: 320px;
     width: 690px;
     float: left;
-    margin-left: 500px;
-    margin-top: 260px;
+    margin-left: 44%;
+    margin-top: 16%;
     position:absolute;
-    z-index: -100;
-    background-color: whitesmoke;
+    z-index: 10;
+    /* background-color: whitesmoke;
     border-radius: 20px;
-    opacity: 0.8;
+    opacity: 0.8; */
 }
 
 .background_entiry{
@@ -208,5 +217,12 @@ export default {
 .cloud_move_two{
     z-index:-10000;
     animation: move_two 100s infinite
+}
+
+.img_card{
+    position: absolute;
+    z-index: -1000;
+    margin-left: 15%;
+    margin-top: 7%;
 }
 </style>

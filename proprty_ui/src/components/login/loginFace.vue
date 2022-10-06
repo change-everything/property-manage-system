@@ -1,6 +1,6 @@
 <template>
 <div>
-	<el-button @click="showDialog">人脸登录</el-button>
+	<el-button @click="showDialog" style="width:360px;height:50px" type="success">人脸登录</el-button>
 	<el-dialog v-model="dialogVisable" width="30vw" title="人脸登录"  @close="beforColse">
 		<div class="space">
 			<video
@@ -191,10 +191,16 @@ export default {
       this.thisVideo.srcObject.getTracks()[0].stop();
     //   alert("关闭摄像头");
     },
+
+    beforColse(){
+      clearInterval(this.timer);
+      this.stopNavigator();
+    }
   },
 
   beforeUnmount(){
       clearInterval(this.timer);
+      this.stopNavigator();
   }
 }
 </script>
