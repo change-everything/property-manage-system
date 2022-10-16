@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/charge")
@@ -18,6 +19,13 @@ public class ChargeInfoController {
     // 自动注入
     @Autowired
     private IChargeInfoService chargeInfoService;
+
+
+    @GetMapping("/info")
+    public Result getInfo() {
+        Map<String, Object> map = chargeInfoService.getChargeInfo();
+        return Result.ok(map);
+    }
 
     @PostMapping
     public Result addCharge(@RequestBody ChargeInfo chargeInfo) {

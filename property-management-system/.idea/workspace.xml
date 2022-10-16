@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment=":add: 基于百度云ai的扫脸登录" />
+    <list default="true" id="e52f418e-5d99-4e50-bcff-ff8a2e089b11" name="Changes" comment=":add: 基于百度云ai的扫脸登录">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/controller/ChargeInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/controller/ChargeInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/ChargeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/ChargeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/NoPayChargeInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/pojo/NoPayChargeInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/security/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/IChargeInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/IChargeInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/ChargeInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/f4/service/impl/ChargeInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/controller/ChargeInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/controller/ChargeInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/ChargeInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/ChargeInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/pojo/NoPayChargeInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/pojo/NoPayChargeInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/security/filter/JwtAuthenticationTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/security/filter/JwtAuthenticationTokenFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/IChargeInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/IChargeInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/ChargeInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/f4/service/impl/ChargeInfoServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -242,6 +256,11 @@
       <workItem from="1664957650943" duration="3172000" />
       <workItem from="1664964287572" duration="1571000" />
       <workItem from="1664966346763" duration="13000" />
+      <workItem from="1665238939341" duration="2547000" />
+      <workItem from="1665499655789" duration="595000" />
+      <workItem from="1665584001685" duration="5150000" />
+      <workItem from="1665629236955" duration="12773000" />
+      <workItem from="1665890403368" duration="56000" />
     </task>
     <task id="LOCAL-00001" summary="初步添加了redis">
       <created>1659690886575</created>

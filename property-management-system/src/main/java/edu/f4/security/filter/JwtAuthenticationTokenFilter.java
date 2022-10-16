@@ -1,5 +1,9 @@
 package edu.f4.security.filter;
 
+import com.alibaba.fastjson.JSON;
+import edu.f4.enumEntity.ResultCode;
+import edu.f4.result.JsonResult;
+import edu.f4.result.ResultTool;
 import edu.f4.security.service.impl.EmployeeDTOServiceImpl;
 import edu.f4.utils.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,13 +35,14 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        // 获取当请求头中的token，其实这里多余，完全可以使用HttpServletRequest来获取
+        // 获取当请求头中的token
         String authToken = httpServletRequest.getHeader("UserToken");
 
         // 获取到当前用户的account
         String account = JwtUtil.getMemberAccountByJwtToken(httpServletRequest);
 
         System.out.println("自定义JWT过滤器获得用户名为"+account);
+
 
         // 当token中的username不为空时进行验证token是否是有效的token
         if (!account.equals("")) {

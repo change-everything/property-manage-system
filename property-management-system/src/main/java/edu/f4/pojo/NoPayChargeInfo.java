@@ -25,7 +25,7 @@ public class NoPayChargeInfo {
     private Integer ownerNum;
     private String chaType;
     private Integer chaQuantity;
-    private Integer chaSum;
+    private Double chaSum;
 
     @TableField(select = false)
     private List<NoPayChargeInfo> children;

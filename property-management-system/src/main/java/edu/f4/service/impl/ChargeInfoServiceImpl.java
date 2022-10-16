@@ -10,8 +10,10 @@ import edu.f4.dto.ChargeInfoVo;
 import edu.f4.mapper.ChargeInfoMapper;
 import edu.f4.pojo.ChargeInfo;
 import edu.f4.pojo.EmployeeInfo;
+import edu.f4.pojo.NoPayChargeInfo;
 import edu.f4.result.Result;
 import edu.f4.service.IChargeInfoService;
+import edu.f4.service.INoPayChargeInfoService;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,9 @@ public class ChargeInfoServiceImpl extends ServiceImpl<ChargeInfoMapper, ChargeI
 
     @Autowired
     private ChargeInfoMapper chargeInfoMapper;
+
+    @Autowired
+    private INoPayChargeInfoService noPayChargeInfoService;
 
     @Override
     public IPage<ChargeInfo> getPage(int currentPage, int pageSize, ChargeInfo chargeInfo) {
@@ -83,6 +88,34 @@ public class ChargeInfoServiceImpl extends ServiceImpl<ChargeInfoMapper, ChargeI
         }
 
         return Result.ok(chargeDTOS);
+    }
+
+    @Override
+    public Map<String, Object> getChargeInfo() {
+        double sum = 0;
+        double paySum = 0;
+        double noPaySum = 0;
+        List<ChargeInfo> list = list();
+        Map<String, Object> map = new HashMap<>();
+        for (ChargeInfo chargeInfo : list) {
+            sum += chargeInfo.getChaSum();
+            paySum += chargeInfo.getChaSum();
+        }
+        List<NoPayChargeInfo> noPayChargeInfos = noPayChargeInfoService.list();
+        for (NoPayChargeInfo noPayChargeInfo : noPayChargeInfos) {
+            sum += noPayChargeInfo.getChaSum();
+            noPaySum += noPayChargeInfo.getChaSum();
+        }
+
+        // 按账单总数算缴费情况
+
+
+
+        map.put("paySum", paySum);
+        map.put("noPaySum", noPaySum);
+        map.put("sum", sum);
+
+        return map;
     }
 
 

@@ -28,7 +28,7 @@ public class ChargeInfo {
     //收费数量
     private Integer chaQuantity;
     //收费金额
-    private String chaSum;
+    private Double chaSum;
     //员工号
     private Integer empNum;
 
