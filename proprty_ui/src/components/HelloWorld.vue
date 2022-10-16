@@ -30,6 +30,8 @@
 
           <el-card style="width:700px;height:290px;margin-left:10px;" class="card">
               <span class="iconfont size_line" style="color:green;">&#xe638;</span>费用统计
+
+              <chargeDetail />
           </el-card>
         </div>
 
@@ -59,10 +61,11 @@
 import pie from '@/components/charts/pie.vue'
 import people from '@/components/charts/categoryPeople.vue'
 import chargeCount from '@/components/charts/chargeCount.vue'
+import chargeDetail from "@/components/charts/chargeDetail"
 import '../assets/iconfont/iconfont.css';
 export default {
   name: 'HelloWorld',
-  components:{chargeCount,people,pie},
+  components:{chargeCount,people,pie,chargeDetail},
   props: {
     msg: String
   },

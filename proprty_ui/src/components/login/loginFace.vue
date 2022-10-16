@@ -188,7 +188,8 @@ export default {
 
     // 关闭摄像头
     stopNavigator() {
-      this.thisVideo.srcObject.getTracks()[0].stop();
+      window.mediaStreamTrack && window.mediaStreamTrack.stop();
+      // this.thisVideo.srcObject.getTracks()[0].stop();
     //   alert("关闭摄像头");
     },
 

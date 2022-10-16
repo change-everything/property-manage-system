@@ -8,9 +8,35 @@
 
 <script>
 import * as echarts from 'echarts';
-
+import commonApi from '../../api/commonApi'
 export default {
+  data(){
+    return{
+      pieData:[]
+    }
+  },
+
   methods:{
+    async getData(){
+      await commonApi.getCommunity().then(res =>{
+         this.pieData.push({'name':"出租率",'value':res.data.rentalRate})
+         this.pieData.push({'name':"入住率",'value':res.data.occupancyRate})
+         this.pieData.push({'name':"空置率",'value':res.data.vacancyRate})
+
+
+         /**
+          * 动态数据填充
+          */
+         echarts.init(document.getElementById('car')).setOption({
+           series:[
+             {
+               data:this.pieData
+             }
+           ]
+         })
+       })
+    },
+
     initCard(){
       echarts.init(document.getElementById('car')).setOption({
         legend: {
@@ -19,18 +45,15 @@ export default {
         },
         tooltip: {
             trigger: 'item',
-            formatter: '{b}:{c} ({d}%)'
+            formatter: '{b}({d}%)'
           },
         series: [
             {
                 type: 'pie',
                 radius: '90%',
+                stillShowZeroSum: false,
                 center: ['60%', '50%'],
-                data: [
-                    { value: 1048, name: '外来车辆' },
-                    { value: 735, name: '本区车辆' },
-                    { value: 580, name: '剩余车位' }
-                ],
+                data:[],
                 emphasis: {
                     itemStyle: {
                     shadowBlur: 10,
@@ -45,6 +68,7 @@ export default {
   },
 
   mounted(){
+    this.getData();
     this.initCard();
   }
 }
